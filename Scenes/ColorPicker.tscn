@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ColorsPicker.gd" type="Script" id=1]
+
+[node name="ColorsPicker" type="OptionButton" groups=["color_buttons"]]
+margin_right = 157.0
+margin_bottom = 97.0
+rect_scale = Vector2( 0.4, 0.4 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+clip_text = true
+align = 1
+icon_align = 1
+script = ExtResource( 1 )

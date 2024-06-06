@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Data/Regions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+regions_maps = {
+"caves": [ "lava", "icebridge", "crystals", "end" ],
+"city": [ "crossroad", "platform", "building", "bazaar" ],
+"desert": [ "desert", "volcano", "temple", "island" ],
+"fields": [ "forest", "funtain", "field", "meadow" ]
+}
+regions_enemies = {
+"caves": [ "Snail", "Bats", "Beetle", "Dragonfly", "Viper", "Mantis" ],
+"city": [ "Scorpion", "Moskito", "Bedbug", "Ladybug", "Bumblebee", "Rat" ],
+"desert": [ "Mole", "Cobra", "Worm", "Fly", "Ants", "Earthworm" ],
+"fields": [ "Widow", "Cockroach", "Slug", "Tick", "Wasp", "Spider" ]
+}

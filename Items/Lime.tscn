@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Lime.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Lime.png" type="Texture" id=2]
+
+[node name="Lime" type="Node"]
+script = ExtResource( 1 )
+item_name = "Lime"
+item_texture = ExtResource( 2 )
+description = "+1 damage"
+cost = 4

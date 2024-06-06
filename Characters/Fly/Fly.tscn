@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Tiles/map_ring_white.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Mole.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/FTManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HealthLabel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://outline_shader.tres" type="Shader" id=5]
+[ext_resource path="res://Characters/Fly/Fly.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://Scenes/ActorAnimation.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/line_thickness = 0.7
+
+[node name="Fly" type="Area2D" groups=["actors"]]
+collision_layer = 513
+collision_mask = 513
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+CLASS = "Fly"
+cost = 14
+initiative = 2
+base_health_points = 35
+base_energy = 2
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 1 )
+position = Vector2( 0, 6 )
+z_index = 2
+frames = ExtResource( 6 )
+animation = "Default"
+playing = true
+offset = Vector2( 0, -5.55556 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 7 )
+polygon = PoolVector2Array( -15.6, 1.25, 0, -6.4, 15.6, 1.25, 0, 8.9 )
+
+[node name="TextureLabel" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, -6 )
+
+[node name="FTManager" parent="." instance=ExtResource( 3 )]
+
+[node name="Ring" type="Sprite" parent="."]
+position = Vector2( 0, 8 )
+z_index = 1
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Buffs" type="Node" parent="."]
+
+[node name="Spells" type="Node" parent="."]
+
+[node name="Items" type="Node" parent="."]
+
+[node name="ActorAnimation" parent="." instance=ExtResource( 7 )]

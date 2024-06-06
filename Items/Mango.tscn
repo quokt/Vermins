@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Mango.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Mango.png" type="Texture" id=2]
+
+[node name="Mango" type="Node"]
+script = ExtResource( 1 )
+item_name = "Mango"
+item_texture = ExtResource( 2 )
+description = "+6 max health"
+cost = 3
+bonus_health = 6

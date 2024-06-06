@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_11.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 1
+min_range = 1
+max_range = 1
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Default"
+spell_ID = "Default"
+character = "Widow"
+description = ""
+critical_effect = ""
+cost = 0
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 2
+sight_needed = true
+range_modif = false
+range_mode = 0
+max_per_turn = 0
+cooldown = 0
+min_power = 7
+max_power = 8
+crit_min_power = 10
+crit_max_power = 12
+crit_chance = 0.2
+spell_type = 0
+aoe = 0
+aoe_mode = 0
+buff_name = ""
+buff_targets = 0
+ai_targets = 1

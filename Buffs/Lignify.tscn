@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Lignify.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_80.png" type="Texture" id=2]
+
+[node name="Lignify" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Lignify"
+buff_id = "Lignify"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "+2 energy, +20% damage reduction"
+crit_description = "+2 energy, +20% damage reduction"

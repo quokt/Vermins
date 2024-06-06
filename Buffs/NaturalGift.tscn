@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/NaturalGift.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/Soul_healing.png" type="Texture" id=2]
+
+[node name="NaturalGift" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Natural Gift"
+buff_id = "NaturalGift"
+turns = 1
+cooldown_mode = 1
+icon = ExtResource( 2 )
+description = "+2 stamina"
+base_description = "+2 stamina"
+crit_description = "+3 stamina"
+max_stack = 3

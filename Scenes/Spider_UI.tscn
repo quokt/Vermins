@@ -1,0 +1,116 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_5.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_4.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Spells_UI.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_1.png" type="Texture" id=6]
+
+[node name="GridContainer" type="HBoxContainer"]
+margin_right = 136.0
+margin_bottom = 24.0
+mouse_filter = 2
+script = ExtResource( 5 )
+CLASS = "Tawny_Spider"
+spells_file_path = "res://json/Tawny_Spider.json"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 24.0
+margin_bottom = 24.0
+hint_tooltip = "Cairn
+Mana : 2
+Range : 3
+Cooldown : 0
+Summon a defensive cairn which reduces damage you and your allies take when standing near it (2 cells)
+"
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 15.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton2"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 15.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton3"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 15.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton4"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 15.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+margin_left = 112.0
+margin_right = 136.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton5"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 15.0
+margin_bottom = 19.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="TextureButton5" to="." method="_on_TextureButton5_pressed"]

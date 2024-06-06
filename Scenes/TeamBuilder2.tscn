@@ -1,0 +1,866 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Scripts/TeamBuilder2.gd" type="Script" id=1]
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/ActorIcon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Theme/panel2.tres" type="StyleBox" id=4]
+[ext_resource path="res://Assets/pixel_font_dynamic.tres" type="DynamicFontData" id=5]
+[ext_resource path="res://Theme/button_pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://Scenes/SpellButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/PreviewCost.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/SpellInfo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/ItemDisplayer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/ColorButtons.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/ItemInfo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Button3D.gd" type="Script" id=14]
+[ext_resource path="res://Assets/UI/button_texture.tres" type="Texture" id=15]
+[ext_resource path="res://Scenes/ClassInfo.tscn" type="PackedScene" id=16]
+
+[sub_resource type="DynamicFont" id=10]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFont" id=8]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+extra_spacing_char = 1
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=9]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+extra_spacing_char = 1
+font_data = ExtResource( 5 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 70, 64, 20 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 13 )
+region = Rect2( 484, 260, 56, 24 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 70, 64, 20 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.615686 )
+
+[node name="TeamBuilder" type="Node2D"]
+z_index = 2
+script = ExtResource( 1 )
+char_file_path = "res://Data/Classes.tres"
+spells_list_path = "res://Spells/SpellsList.tres"
+spells_path = "res://Spells/"
+SAVE_PATH = "user://game_data.tres"
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 196610, 1, 0, 196611, 1, 524289, 196612, 1, 2, 196614, 1, 0, 196615, 1, 524289, 196616, 1, 2, 196618, 1, 0, 196619, 1, 524289, 196620, 1, 2, 262145, 1, 0, 262146, 1, 524290, 262147, 1, 65537, 262148, 1, 524288, 262149, 1, 524289, 262150, 1, 524290, 262151, 1, 65537, 262152, 1, 524288, 262153, 1, 1, 262154, 1, 524290, 262155, 1, 65537, 262156, 1, 524288, 262157, 1, 2, 327681, 1, 458754, 327682, 1, 65537, 327683, 1, 65537, 327684, 1, 65537, 327685, 1, 65537, 327686, 1, 65537, 327687, 1, 65537, 327688, 1, 65537, 327689, 1, 65537, 327690, 1, 65537, 327691, 1, 65537, 327692, 1, 65537, 327693, 1, 65538, 393217, 1, 65536, 393218, 1, 65537, 393219, 1, 65537, 393220, 1, 65537, 393221, 1, 65537, 393222, 1, 65537, 393223, 1, 65537, 393224, 1, 65537, 393225, 1, 65537, 393226, 1, 65537, 393227, 1, 65537, 393228, 1, 65537, 393229, 1, 458752, 458753, 1, 458754, 458754, 1, 65537, 458755, 1, 65537, 458756, 1, 65537, 458757, 1, 65537, 458758, 1, 65537, 458759, 1, 65537, 458760, 1, 65537, 458761, 1, 65537, 458762, 1, 65537, 458763, 1, 65537, 458764, 1, 65537, 458765, 1, 65538, 524289, 1, 458754, 524290, 1, 65537, 524291, 1, 65537, 524292, 1, 65537, 524293, 1, 65537, 524294, 1, 65537, 524295, 1, 65537, 524296, 1, 65537, 524297, 1, 65537, 524298, 1, 65537, 524299, 1, 65537, 524300, 1, 65537, 524301, 1, 65538, 589825, 1, 131072, 589826, 1, 393217, 589827, 1, 131073, 589828, 1, 131073, 589829, 1, 131073, 589830, 1, 131073, 589831, 1, 393217, 589832, 1, 393217, 589833, 1, 393217, 589834, 1, 131073, 589835, 1, 393217, 589836, 1, 131073, 589837, 1, 131074 )
+
+[node name="Shadow" type="TileMap" parent="TileMap"]
+modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+position = Vector2( 7, 7 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 196610, 1, 0, 196611, 1, 524289, 196612, 1, 2, 196614, 1, 0, 196615, 1, 524289, 196616, 1, 2, 196618, 1, 0, 196619, 1, 524289, 196620, 1, 2, 262145, 1, 0, 262146, 1, 524290, 262147, 1, 65537, 262148, 1, 524288, 262149, 1, 524289, 262150, 1, 524290, 262151, 1, 65537, 262152, 1, 524288, 262153, 1, 1, 262154, 1, 524290, 262155, 1, 65537, 262156, 1, 524288, 262157, 1, 2, 327681, 1, 458754, 327682, 1, 65537, 327683, 1, 65537, 327684, 1, 65537, 327685, 1, 65537, 327686, 1, 65537, 327687, 1, 65537, 327688, 1, 65537, 327689, 1, 65537, 327690, 1, 65537, 327691, 1, 65537, 327692, 1, 65537, 327693, 1, 65538, 393217, 1, 65536, 393218, 1, 65537, 393219, 1, 65537, 393220, 1, 65537, 393221, 1, 65537, 393222, 1, 65537, 393223, 1, 65537, 393224, 1, 65537, 393225, 1, 65537, 393226, 1, 65537, 393227, 1, 65537, 393228, 1, 65537, 393229, 1, 458752, 458753, 1, 458754, 458754, 1, 65537, 458755, 1, 65537, 458756, 1, 65537, 458757, 1, 65537, 458758, 1, 65537, 458759, 1, 65537, 458760, 1, 65537, 458761, 1, 65537, 458762, 1, 65537, 458763, 1, 65537, 458764, 1, 65537, 458765, 1, 65538, 524289, 1, 458754, 524290, 1, 65537, 524291, 1, 65537, 524292, 1, 65537, 524293, 1, 65537, 524294, 1, 65537, 524295, 1, 65537, 524296, 1, 65537, 524297, 1, 65537, 524298, 1, 65537, 524299, 1, 65537, 524300, 1, 65537, 524301, 1, 65538, 589825, 1, 131072, 589826, 1, 393217, 589827, 1, 131073, 589828, 1, 131073, 589829, 1, 131073, 589830, 1, 131073, 589831, 1, 393217, 589832, 1, 393217, 589833, 1, 393217, 589834, 1, 131073, 589835, 1, 393217, 589836, 1, 131073, 589837, 1, 131074 )
+
+[node name="Button" type="Button" parent="TileMap"]
+margin_left = 64.0
+margin_top = 96.0
+margin_right = 160.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 10 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Label" type="Label" parent="TileMap/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 6.0
+margin_right = 42.0
+margin_bottom = 6.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "vermins"
+align = 1
+
+[node name="Button2" type="Button" parent="TileMap"]
+margin_left = 192.0
+margin_top = 96.0
+margin_right = 288.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 8 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Label" type="Label" parent="TileMap/Button2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "spells"
+align = 1
+valign = 1
+
+[node name="Button3" type="Button" parent="TileMap"]
+margin_left = 320.0
+margin_top = 98.0
+margin_right = 414.0
+margin_bottom = 129.0
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+
+[node name="Label" type="Label" parent="TileMap/Button3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 42.0
+margin_bottom = 13.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "items"
+align = 1
+valign = 1
+
+[node name="Tab1" type="Control" parent="."]
+margin_left = 37.0
+margin_top = 125.0
+margin_right = 421.0
+margin_bottom = 285.0
+mouse_filter = 2
+
+[node name="TileMap" type="TileMap" parent="Tab1"]
+position = Vector2( -15, 20 )
+scale = Vector2( 2.1, 2.1 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131073, 0, 0, 131074, 0, 524289, 131075, 0, 524289, 131076, 0, 1, 131077, 0, 524289, 131078, 0, 1, 131079, 0, 1, 131080, 0, 2, 196609, 0, 458754, 196610, 0, 65537, 196611, 0, 65537, 196612, 0, 65537, 196613, 0, 65537, 196614, 0, 65537, 196615, 0, 65537, 196616, 0, 458752, 262145, 0, 65536, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65537, 262149, 0, 65537, 262150, 0, 65537, 262151, 0, 65537, 262152, 0, 458752, 327681, 0, 458754, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 65537, 327685, 0, 65537, 327686, 0, 65537, 327687, 0, 65537, 327688, 0, 458752, 393217, 0, 131072, 393218, 0, 393217, 393219, 0, 131073, 393220, 0, 131073, 393221, 0, 131073, 393222, 0, 393217, 393223, 0, 131073, 393224, 0, 131074 )
+
+[node name="Shadow" type="TileMap" parent="Tab1/TileMap"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 5, 5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131073, 0, 0, 131074, 0, 524289, 131075, 0, 524289, 131076, 0, 1, 131077, 0, 524289, 131078, 0, 1, 131079, 0, 1, 131080, 0, 2, 196609, 0, 458754, 196610, 0, 65537, 196611, 0, 65537, 196612, 0, 65537, 196613, 0, 65537, 196614, 0, 65537, 196615, 0, 65537, 196616, 0, 458752, 262145, 0, 65536, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65537, 262149, 0, 65537, 262150, 0, 65537, 262151, 0, 65537, 262152, 0, 458752, 327681, 0, 458754, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 65537, 327685, 0, 65537, 327686, 0, 65537, 327687, 0, 65537, 327688, 0, 458752, 393217, 0, 131072, 393218, 0, 393217, 393219, 0, 131073, 393220, 0, 131073, 393221, 0, 131073, 393222, 0, 393217, 393223, 0, 131073, 393224, 0, 131074 )
+
+[node name="MarginContainer" type="Control" parent="Tab1"]
+margin_left = 580.0
+margin_top = 135.0
+margin_right = 821.0
+margin_bottom = 506.0
+
+[node name="Button" type="Button" parent="Tab1/MarginContainer"]
+anchor_left = 0.124481
+anchor_top = 0.703504
+anchor_right = 0.86722
+anchor_bottom = 0.876011
+disabled = true
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Tab1/MarginContainer/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "add to team"
+align = 1
+valign = 1
+
+[node name="PanelContainer" type="Panel" parent="Tab1/MarginContainer"]
+margin_left = 27.0
+margin_top = 54.0
+margin_right = 212.0
+margin_bottom = 210.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Tab1/MarginContainer/PanelContainer"]
+margin_left = 30.0
+margin_top = 106.0
+margin_right = 156.0
+margin_bottom = 134.0
+align = 1
+valign = 1
+
+[node name="ActorIcon" parent="Tab1/MarginContainer/PanelContainer" instance=ExtResource( 3 )]
+margin_left = 47.0
+margin_top = 26.0
+margin_right = 92.0
+margin_bottom = 62.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer2" type="Panel" parent="Tab1/MarginContainer"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 35.0
+margin_top = 61.0
+margin_right = 220.0
+margin_bottom = 217.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Tab1/MarginContainer"]
+position = Vector2( 120, 336 )
+scale = Vector2( 2.25, 2.575 )
+texture = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cost" parent="Tab1/MarginContainer/Sprite" instance=ExtResource( 8 )]
+margin_left = -24.0
+margin_top = -4.0
+margin_right = 21.0
+margin_bottom = 24.0
+rect_scale = Vector2( 0.55, 0.45 )
+align = 2
+
+[node name="Shadow" type="Sprite" parent="Tab1/MarginContainer/Sprite"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+texture = SubResource( 11 )
+
+[node name="CharList" type="Control" parent="Tab1"]
+margin_left = -13.0
+margin_top = 98.0
+margin_right = 580.0
+margin_bottom = 490.0
+focus_mode = 1
+mouse_filter = 2
+
+[node name="GiantsList" type="Control" parent="Tab1"]
+visible = false
+margin_left = -48.0
+margin_top = 71.0
+margin_right = 587.0
+margin_bottom = 490.0
+focus_mode = 1
+mouse_filter = 2
+
+[node name="ActorIcon" parent="Tab1/GiantsList" instance=ExtResource( 3 )]
+margin_left = 168.0
+margin_top = 111.0
+margin_right = 212.0
+margin_bottom = 147.0
+rect_scale = Vector2( 3.5, 3.5 )
+
+[node name="ActorIcon2" parent="Tab1/GiantsList" instance=ExtResource( 3 )]
+margin_left = 425.0
+margin_top = 130.0
+margin_right = 469.0
+margin_bottom = 166.0
+rect_scale = Vector2( 3.5, 3.5 )
+
+[node name="ActorIcon3" parent="Tab1/GiantsList" instance=ExtResource( 3 )]
+margin_left = 169.0
+margin_top = 268.0
+margin_right = 213.0
+margin_bottom = 304.0
+rect_scale = Vector2( 3.5, 3.5 )
+
+[node name="ActorIcon4" parent="Tab1/GiantsList" instance=ExtResource( 3 )]
+margin_left = 428.0
+margin_top = 265.0
+margin_right = 472.0
+margin_bottom = 301.0
+rect_scale = Vector2( 3.5, 3.5 )
+
+[node name="Info" type="Sprite" parent="Tab1"]
+position = Vector2( 696, 369 )
+scale = Vector2( 1.7, 1.7 )
+texture = SubResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Tab1/Info"]
+margin_left = -28.0
+margin_top = -11.0
+margin_right = 51.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.7, 0.7 )
+mouse_filter = 1
+text = "INFO"
+align = 1
+valign = 1
+
+[node name="Shadow" type="Sprite" parent="Tab1/Info"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2.35297, 2.35294 )
+texture = SubResource( 13 )
+
+[node name="ClassInfo" parent="Tab1" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( 302, 132 )
+scale = Vector2( 1.8, 1.8 )
+z_index = 1
+
+[node name="Giants" type="Button" parent="Tab1"]
+margin_left = 638.0
+margin_top = 146.0
+margin_right = 758.0
+margin_bottom = 181.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Tab1/Giants"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = -2.0
+text = "Giants"
+align = 1
+valign = 1
+
+[node name="Tab2" type="Control" parent="."]
+visible = false
+margin_left = 68.0
+margin_top = 262.0
+margin_right = 829.0
+margin_bottom = 572.0
+
+[node name="MarginContainer2" type="Control" parent="Tab2"]
+margin_left = 549.0
+margin_top = -2.0
+margin_right = 790.0
+margin_bottom = 369.0
+
+[node name="TileMap" type="TileMap" parent="Tab2/MarginContainer2"]
+position = Vector2( -567, 16 )
+scale = Vector2( 2.26, 2.14 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1, 0, 0, 2, 0, 1, 3, 0, 2, 65537, 0, 458754, 65538, 0, 65537, 65539, 0, 458752, 131073, 0, 65536, 131074, 0, 65537, 131075, 0, 65538, 196609, 0, 458754, 196610, 0, 65537, 196611, 0, 458752, 262145, 0, 131072, 262146, 0, 131073, 262147, 0, 131074 )
+
+[node name="Shadow" type="TileMap" parent="Tab2/MarginContainer2/TileMap"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 5, 5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1, 0, 0, 2, 0, 524289, 3, 0, 2, 65537, 0, 458754, 65538, 0, 65537, 65539, 0, 458752, 131073, 0, 65536, 131074, 0, 65537, 131075, 0, 458752, 196609, 0, 65536, 196610, 0, 65537, 196611, 0, 458752, 262145, 0, 131072, 262146, 0, 131073, 262147, 0, 131074 )
+
+[node name="Button" type="Button" parent="Tab2/MarginContainer2"]
+margin_left = 31.0
+margin_top = 262.0
+margin_right = 208.0
+margin_bottom = 324.0
+disabled = true
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Tab2/MarginContainer2/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -5.0
+margin_bottom = -1.0
+text = "add spell"
+align = 1
+valign = 1
+
+[node name="PanelContainer" type="Panel" parent="Tab2/MarginContainer2"]
+margin_left = 27.0
+margin_top = 54.0
+margin_right = 212.0
+margin_bottom = 210.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Tab2/MarginContainer2/PanelContainer"]
+margin_left = 30.0
+margin_top = 106.0
+margin_right = 156.0
+margin_bottom = 134.0
+align = 1
+valign = 1
+
+[node name="ActorIcon" parent="Tab2/MarginContainer2/PanelContainer" instance=ExtResource( 3 )]
+margin_left = 47.0
+margin_top = 26.0
+margin_right = 92.0
+margin_bottom = 62.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer2" type="Panel" parent="Tab2/MarginContainer2"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 35.0
+margin_top = 61.0
+margin_right = 220.0
+margin_bottom = 217.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Tab2/MarginContainer2"]
+position = Vector2( 120, 336 )
+scale = Vector2( 2.25, 2.575 )
+texture = SubResource( 11 )
+
+[node name="Cost" parent="Tab2/MarginContainer2/Sprite" instance=ExtResource( 8 )]
+margin_left = -22.2222
+margin_top = -4.27184
+margin_right = 26.7778
+margin_bottom = 23.7282
+rect_scale = Vector2( 0.55, 0.45 )
+
+[node name="Shadow" type="Sprite" parent="Tab2/MarginContainer2/Sprite"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+texture = SubResource( 11 )
+
+[node name="SpellsList" type="Control" parent="Tab2"]
+margin_left = 56.0
+margin_top = 22.0
+margin_right = 259.0
+margin_bottom = 331.0
+
+[node name="SpellButton" parent="Tab2/SpellsList" instance=ExtResource( 7 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -162.0
+margin_bottom = -269.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="SpellButton2" parent="Tab2/SpellsList" instance=ExtResource( 7 )]
+margin_left = 120.0
+margin_top = 16.0
+margin_right = -59.0
+margin_bottom = -269.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="SpellButton3" parent="Tab2/SpellsList" instance=ExtResource( 7 )]
+margin_left = 16.0
+margin_top = 126.0
+margin_right = -163.0
+margin_bottom = -159.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="SpellButton4" parent="Tab2/SpellsList" instance=ExtResource( 7 )]
+margin_left = 120.0
+margin_top = 126.0
+margin_right = -59.0
+margin_bottom = -159.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="SpellButton5" parent="Tab2/SpellsList" instance=ExtResource( 7 )]
+margin_left = 70.0
+margin_top = 236.0
+margin_right = -109.0
+margin_bottom = -49.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="SpellInfo" parent="Tab2" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 303, 19 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Label" type="Label" parent="Tab2"]
+margin_left = 310.0
+margin_top = 74.0
+margin_right = 425.0
+margin_bottom = 179.0
+rect_scale = Vector2( 2, 2 )
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "click on a team member"
+align = 1
+autowrap = true
+
+[node name="Tab3" type="Control" parent="."]
+visible = false
+margin_left = 67.0
+margin_top = 259.0
+margin_right = 829.0
+margin_bottom = 574.0
+
+[node name="MarginContainer3" type="Control" parent="Tab3"]
+margin_left = 550.0
+margin_top = 1.0
+margin_right = 791.0
+margin_bottom = 372.0
+
+[node name="Button" type="Button" parent="Tab3/MarginContainer3"]
+margin_left = 31.0
+margin_top = 262.0
+margin_right = 208.0
+margin_bottom = 324.0
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Tab3/MarginContainer3/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "add item"
+align = 1
+valign = 1
+
+[node name="PanelContainer" type="Panel" parent="Tab3/MarginContainer3"]
+margin_left = 27.0
+margin_top = 54.0
+margin_right = 212.0
+margin_bottom = 210.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Tab3/MarginContainer3/PanelContainer"]
+margin_left = 30.0
+margin_top = 106.0
+margin_right = 156.0
+margin_bottom = 134.0
+align = 1
+valign = 1
+
+[node name="ActorIcon" parent="Tab3/MarginContainer3/PanelContainer" instance=ExtResource( 3 )]
+margin_left = 47.0
+margin_top = 26.0
+margin_right = 92.0
+margin_bottom = 62.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer2" type="Panel" parent="Tab3/MarginContainer3"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 35.0
+margin_top = 61.0
+margin_right = 220.0
+margin_bottom = 217.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Tab3/MarginContainer3"]
+position = Vector2( 120, 336 )
+scale = Vector2( 2.25, 2.575 )
+texture = SubResource( 11 )
+
+[node name="Cost" parent="Tab3/MarginContainer3/Sprite" instance=ExtResource( 8 )]
+margin_left = -22.2222
+margin_top = -4.27184
+margin_right = 26.7778
+margin_bottom = 23.7282
+rect_scale = Vector2( 0.55, 0.45 )
+
+[node name="Shadow" type="Sprite" parent="Tab3/MarginContainer3/Sprite"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+texture = SubResource( 11 )
+
+[node name="ItemDisplayer" parent="Tab3" instance=ExtResource( 10 )]
+margin_left = 16.0
+margin_top = 43.0
+margin_right = 380.0
+margin_bottom = 357.0
+
+[node name="Label" type="Label" parent="Tab3"]
+margin_left = 377.0
+margin_top = 76.0
+margin_right = 475.0
+margin_bottom = 228.0
+rect_scale = Vector2( 1.8, 1.8 )
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "click on a team member"
+align = 1
+autowrap = true
+
+[node name="ItemInfo" parent="Tab3" instance=ExtResource( 12 )]
+visible = false
+margin_left = 369.0
+margin_top = 59.0
+margin_right = 369.0
+margin_bottom = 153.08
+rect_scale = Vector2( 0.8, 0.8 )
+
+[node name="TeamPreviewBg" type="TileMap" parent="."]
+light_mask = 0
+position = Vector2( -15, -10 )
+scale = Vector2( 2.5, 2.5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131083, 0, 0, 131084, 0, 2, 196619, 0, 65536, 196620, 0, 65538, 262155, 0, 65536, 262156, 0, 458752, 327691, 0, 65536, 327692, 0, 65538, 393227, 0, 458754, 393228, 0, 458752, 458763, 0, 131072, 458764, 0, 131074 )
+
+[node name="TeamPreviewBgShadow" type="TileMap" parent="TeamPreviewBg"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 8, 8 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131083, 0, 0, 131084, 0, 2, 196619, 0, 458754, 196620, 0, 458752, 262155, 0, 65536, 262156, 0, 65538, 327691, 0, 65536, 327692, 0, 458752, 393227, 0, 458754, 393228, 0, 65538, 458763, 0, 131072, 458764, 0, 131074 )
+
+[node name="TeamPreview" type="Control" parent="."]
+light_mask = 0
+margin_left = 882.0
+margin_top = 195.0
+margin_right = 1010.0
+margin_bottom = 637.0
+mouse_filter = 2
+
+[node name="Icons" type="Control" parent="TeamPreview"]
+light_mask = 0
+margin_left = 20.0
+margin_top = 48.0
+margin_right = 103.0
+margin_bottom = 351.0
+mouse_filter = 2
+
+[node name="TeamList" type="VBoxContainer" parent="TeamPreview/Icons"]
+light_mask = 0
+margin_left = 17.0
+margin_top = -9.0
+margin_right = 61.0
+margin_bottom = 262.0
+mouse_filter = 2
+custom_constants/separation = 33
+
+[node name="RemoveButtons" type="Control" parent="TeamPreview"]
+light_mask = 0
+margin_left = -11.0
+margin_top = 34.0
+margin_right = 23.0
+margin_bottom = 389.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TeamPreview"]
+layer = 0
+follow_viewport_enable = true
+
+[node name="ColorButtons" type="Control" parent="TeamPreview/CanvasLayer"]
+light_mask = 0
+margin_left = 871.0
+margin_top = 227.0
+margin_right = 901.0
+margin_bottom = 354.0
+rect_scale = Vector2( 2.5, 2.5 )
+mouse_filter = 2
+script = ExtResource( 11 )
+
+[node name="ConfirmButton" type="Button" parent="TeamPreview"]
+light_mask = 0
+margin_left = 11.0
+margin_top = 353.0
+margin_right = 115.0
+margin_bottom = 383.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="TeamPreview/ConfirmButton"]
+light_mask = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "confirm"
+
+[node name="TextureRect" type="TextureRect" parent="TeamPreview/ConfirmButton"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+light_mask = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 3.0
+margin_right = -101.0
+margin_bottom = -27.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="BackButton" type="Button" parent="TeamPreview" groups=["back"]]
+light_mask = 0
+margin_left = 11.0
+margin_top = 391.0
+margin_right = 115.0
+margin_bottom = 421.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="TeamPreview/BackButton"]
+light_mask = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "back"
+align = 1
+valign = 1
+
+[node name="CurrentCostBg" type="Sprite" parent="TeamPreview"]
+light_mask = 0
+position = Vector2( 62, -16 )
+scale = Vector2( 3.16406, 3.6625 )
+texture = SubResource( 12 )
+
+[node name="CurrentCostBgShadow" type="Sprite" parent="TeamPreview/CurrentCostBg"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 3, 2 )
+texture = SubResource( 12 )
+
+[node name="CurrentCost" parent="TeamPreview" instance=ExtResource( 8 )]
+light_mask = 0
+margin_left = -17.0
+margin_top = -34.0
+margin_right = 42.0
+margin_bottom = 3.0
+rect_scale = Vector2( 1.8, 1.8 )
+
+[node name="TextureRect" parent="TeamPreview/CurrentCost" index="0"]
+light_mask = 0
+
+[node name="SpellInfo" parent="TeamPreview" groups=["spell_info"] instance=ExtResource( 9 )]
+visible = false
+light_mask = 0
+position = Vector2( -284, 77 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="ItemInfo" parent="TeamPreview" groups=["item_info"] instance=ExtResource( 12 )]
+visible = false
+light_mask = 0
+margin_left = -266.0
+margin_top = 69.0
+margin_right = -266.0
+margin_bottom = 69.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="TeamPreview"]
+visible = false
+
+[node name="Layer" type="Node2D" parent="."]
+visible = false
+z_index = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="Layer"]
+margin_left = -144.0
+margin_top = -37.0
+margin_right = 1301.0
+margin_bottom = 817.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Panel2" type="Panel" parent="Layer"]
+margin_left = 357.0
+margin_top = 279.0
+margin_right = 2177.0
+margin_bottom = 1224.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_styles/panel = ExtResource( 4 )
+
+[node name="LineEdit" type="LineEdit" parent="Layer"]
+margin_left = 387.0
+margin_top = 351.0
+margin_right = 699.0
+margin_bottom = 391.0
+custom_styles/read_only = ExtResource( 6 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 6 )
+align = 1
+max_length = 17
+placeholder_text = "new team"
+
+[node name="Label" type="Label" parent="Layer"]
+margin_left = 416.0
+margin_top = 301.0
+margin_right = 666.0
+margin_bottom = 343.0
+text = "Name your team"
+align = 1
+valign = 1
+
+[node name="Cancel" type="Button" parent="Layer"]
+margin_left = 410.0
+margin_top = 409.0
+margin_right = 524.0
+margin_bottom = 448.0
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Layer/Cancel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "cancel"
+align = 1
+valign = 1
+
+[node name="Confirm" type="Button" parent="Layer"]
+margin_left = 562.0
+margin_top = 409.0
+margin_right = 676.0
+margin_bottom = 448.0
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Layer/Confirm"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "confirm"
+align = 1
+valign = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2( 576, 347 )
+zoom = Vector2( 1.1, 1.1 )
+
+[connection signal="pressed" from="TileMap/Button" to="." method="_on_Tab1_pressed"]
+[connection signal="pressed" from="TileMap/Button2" to="." method="_on_Tab2_pressed"]
+[connection signal="pressed" from="TileMap/Button3" to="." method="_on_Tab3_pressed"]
+[connection signal="pressed" from="Tab1/MarginContainer/Button" to="." method="_on_team_add_pressed"]
+[connection signal="mouse_entered" from="Tab1/Info/Label" to="." method="_on_actor_info_entered"]
+[connection signal="mouse_exited" from="Tab1/Info/Label" to="." method="_on_actor_info_exited"]
+[connection signal="pressed" from="Tab1/Giants" to="." method="_on_Giants_pressed"]
+[connection signal="pressed" from="Tab2/MarginContainer2/Button" to="." method="_on_add_spell_pressed"]
+[connection signal="pressed" from="Tab3/MarginContainer3/Button" to="." method="_on_add_item_pressed"]
+[connection signal="pressed" from="TeamPreview/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Layer/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="Layer/Confirm" to="." method="_on_real_confirm_pressed"]
+
+[editable path="TeamPreview/CurrentCost"]

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_43.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 9
+min_range = 3
+max_range = 6
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Hickey"
+spell_ID = "Hickey"
+character = "Slug"
+description = "Deal damage. Targets become burned."
+critical_effect = "More damage."
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 3
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 2
+cooldown = 0
+min_power = 6
+max_power = 9
+crit_min_power = 12
+crit_max_power = 14
+crit_chance = 0.1
+spell_type = 1
+aoe = 1
+aoe_mode = 1
+buff_name = "Burned"
+buff_targets = 0
+ai_targets = 1

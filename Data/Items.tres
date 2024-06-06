@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Data/Items.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+fruits = [ "Apple", "Avocado", "Banana", "Cherry", "Grapes", "Kiwi", "Lime", "Mango", "Orange", "Pineapple", "Blueberries", "Strawberry" ]
+veggies = [ "Broccoli", "Eggplant", "Potato", "Peas", "Salad", "Jalapeno", "Leek", "Corn", "Mushroom", "Turnip", "Beetroot", "Pumpkin" ]
+drinks = [ "Firedrink", "Coffee", "Cocktail", "OrangeJuice", "Nectar", "Elixir", "Oil", "Alcool", "Soup", "RedPotion", "BluePotion", "GreenPotion" ]
+junk = [ "Candy", "Burger", "Cheese", "Icecream", "Cake", "Sandwich", "Donut", "Chocolate", "Popcorn", "Lollipop", "Pizza", "Sausage" ]
+gold = [ "Coin", "Bell", "Watch", "Diamond" ]

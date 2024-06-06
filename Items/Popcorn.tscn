@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Items/Popcorn.png" type="Texture" id=1]
+[ext_resource path="res://Items/Popcorn.gd" type="Script" id=2]
+
+[node name="Popcorn" type="Node"]
+script = ExtResource( 2 )
+item_name = "Popcorn"
+item_texture = ExtResource( 1 )
+description = "-1 energy
++2 damage"
+cost = 3
+bonus_damage = 2

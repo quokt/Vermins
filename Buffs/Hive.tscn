@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Hive.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_16.png" type="Texture" id=2]
+
+[node name="Hive" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Hive"
+turns = 3
+icon = ExtResource( 2 )
+base_description = "+5 damage"
+crit_description = "+5 damage"
+max_stack = 3

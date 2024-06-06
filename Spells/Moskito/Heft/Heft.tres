@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_96.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 1
+min_range = 0
+max_range = 5
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Heft"
+spell_ID = "Heft"
+character = "Moskito"
+description = "Deal important damage in a large area"
+critical_effect = "Allies take no damage"
+cost = 9
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 5
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 0
+cooldown = 0
+min_power = 10
+max_power = 14
+crit_min_power = 16
+crit_max_power = 20
+crit_chance = 0.1
+spell_type = 0
+aoe = 3
+aoe_mode = 0
+buff_name = ""
+buff_targets = 0
+ai_targets = 1

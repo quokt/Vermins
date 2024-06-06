@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/Etch_soul.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Dusk.gd" type="Script" id=2]
+
+[node name="Dusk" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+remove_mode = 1
+buff_name = "Dusk"
+turns = -1
+cooldown_mode = 1
+icon = ExtResource( 1 )
+base_description = "+5 damage. Removed upon taking damage."
+crit_description = "+8 damage. Removed upon taking damage."
+max_stack = 3

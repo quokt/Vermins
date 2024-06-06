@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Shaders/wind_shader.tres" type="Shader" id=1]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/speed = 1.0
+shader_param/minStrength = 0.8
+shader_param/maxStrength = 1.0
+shader_param/strengthScale = 200.0
+shader_param/interval = 8.0
+shader_param/detail = 0.1
+shader_param/distortion = 1.0
+shader_param/heightOffset = 0.99
+shader_param/offset = 3.0

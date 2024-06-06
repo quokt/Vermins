@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Exposed.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_72.png" type="Texture" id=2]
+
+[node name="Exposed" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Exposed"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "You are twice as big. All damage you take is increased by 5"
+crit_description = "You are twice as big. All damage you take is increased by 5"
+max_stack = 2

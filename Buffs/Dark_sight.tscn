@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Dark_sight.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/Lurk.png" type="Texture" id=2]
+
+[node name="Dark_sight" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Dark Sight"
+buff_id = "Drak_sight"
+turns = 2
+icon = ExtResource( 2 )
+base_description = "+4 magic damage. +2 range"
+crit_description = "+4 magic damage. +3 range"
+max_stack = 2

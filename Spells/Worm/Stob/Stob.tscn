@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Worm/Stob/Stob.gd" type="Script" id=1]
+
+[node name="Stob" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Stob"
+character = "Worm"

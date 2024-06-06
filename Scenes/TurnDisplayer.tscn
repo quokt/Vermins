@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/IconsContainer.gd" type="Script" id=1]
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Scripts/TurnDisplayer.gd" type="Script" id=3]
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 448, 192, 32, 32 )
+
+[node name="TurnDisplayer" type="Control"]
+script = ExtResource( 3 )
+
+[node name="Bg2" type="TileMap" parent="."]
+position = Vector2( 9, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 5, 1, 0, 6, 1, 524289, 7, 1, 2, 65541, 1, 131072, 65542, 1, 393217, 65543, 1, 131074 )
+
+[node name="Bg3" type="TileMap" parent="."]
+position = Vector2( 13, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 4, 1, 0, 5, 1, 524289, 6, 1, 1, 7, 1, 2, 65540, 1, 131072, 65541, 1, 393217, 65542, 1, 131073, 65543, 1, 131074 )
+
+[node name="Bg4" type="TileMap" parent="."]
+position = Vector2( 9, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 4, 1, 0, 5, 1, 524289, 6, 1, 1, 7, 1, 524289, 8, 1, 2, 65540, 1, 131072, 65541, 1, 131073, 65542, 1, 131073, 65543, 1, 393217, 65544, 1, 131074 )
+
+[node name="Bg5" type="TileMap" parent="."]
+position = Vector2( 13, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 3, 1, 0, 4, 1, 524289, 5, 1, 524289, 6, 1, 524289, 7, 1, 524289, 8, 1, 2, 65539, 1, 131072, 65540, 1, 131073, 65541, 1, 131073, 65542, 1, 131073, 65543, 1, 131073, 65544, 1, 131074 )
+
+[node name="Bg6" type="TileMap" parent="."]
+position = Vector2( 9, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 3, 1, 0, 4, 1, 1, 5, 1, 1, 6, 1, 524289, 7, 1, 524289, 8, 1, 1, 9, 1, 2, 65539, 1, 131072, 65540, 1, 393217, 65541, 1, 393217, 65542, 1, 131073, 65543, 1, 393217, 65544, 1, 131073, 65545, 1, 131074 )
+
+[node name="Bg7" type="TileMap" parent="."]
+position = Vector2( 13, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0, 3, 1, 1, 4, 1, 524289, 5, 1, 1, 6, 1, 1, 7, 1, 524289, 8, 1, 524289, 9, 1, 2, 65538, 1, 131072, 65539, 1, 393217, 65540, 1, 393217, 65541, 1, 131073, 65542, 1, 393217, 65543, 1, 131073, 65544, 1, 131073, 65545, 1, 131074 )
+
+[node name="Bg8" type="TileMap" parent="."]
+position = Vector2( 9, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0, 3, 1, 524289, 4, 1, 1, 5, 1, 524289, 6, 1, 524289, 7, 1, 524289, 8, 1, 524289, 9, 1, 524289, 10, 1, 2, 65538, 1, 131072, 65539, 1, 393217, 65540, 1, 131073, 65541, 1, 393217, 65542, 1, 393217, 65543, 1, 131073, 65544, 1, 131073, 65545, 1, 393217, 65546, 1, 131074 )
+
+[node name="Bg9" type="TileMap" parent="."]
+position = Vector2( 13, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1, 1, 0, 2, 1, 1, 3, 1, 1, 4, 1, 1, 5, 1, 1, 6, 1, 1, 7, 1, 524289, 8, 1, 524289, 9, 1, 524289, 10, 1, 2, 65537, 1, 131072, 65538, 1, 393217, 65539, 1, 131073, 65540, 1, 131073, 65541, 1, 131073, 65542, 1, 131073, 65543, 1, 131073, 65544, 1, 393217, 65545, 1, 131073, 65546, 1, 131074 )
+
+[node name="Bg10" type="TileMap" parent="."]
+position = Vector2( 9, 0 )
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1, 1, 0, 2, 1, 524289, 3, 1, 524289, 4, 1, 1, 5, 1, 524289, 6, 1, 524289, 7, 1, 524289, 8, 1, 524289, 9, 1, 524289, 10, 1, 1, 11, 1, 2, 65537, 1, 131072, 65538, 1, 131073, 65539, 1, 393217, 65540, 1, 131073, 65541, 1, 393217, 65542, 1, 393217, 65543, 1, 131073, 65544, 1, 131073, 65545, 1, 393217, 65546, 1, 393217, 65547, 1, 131074 )
+
+[node name="IconsContainer" type="Control" parent="."]
+margin_left = -22.0
+margin_right = 268.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.2, 0.2 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Icons" type="HBoxContainer" parent="IconsContainer"]
+anchor_left = 0.5
+anchor_top = 0.417
+anchor_right = 0.5
+anchor_bottom = 0.417
+margin_left = -245.0
+margin_top = -22.518
+margin_right = 250.0
+margin_bottom = 22.482
+grow_horizontal = 2
+mouse_filter = 2
+size_flags_vertical = 3
+custom_constants/separation = 46
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Control" type="Control" parent="IconsContainer"]
+margin_left = 220.0
+margin_top = 40.0
+margin_right = 270.0
+margin_bottom = 80.0
+mouse_filter = 2
+
+[node name="Selector2" type="Sprite" parent="IconsContainer/Control"]
+scale = Vector2( 1.7, 2 )
+z_index = 1
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_TurnDisplayer_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_TurnDisplayer_mouse_exited"]

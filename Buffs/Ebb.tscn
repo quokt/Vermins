@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Ebb.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_69.png" type="Texture" id=2]
+
+[node name="Ebb" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Ebb"
+turns = 1
+cooldown_mode = 1
+icon = ExtResource( 2 )
+description = "-25% Physic and Magic damage"
+base_description = "-25% damage"
+crit_description = "-25% damage"
+max_stack = 3

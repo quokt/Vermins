@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Glowth.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_38.png" type="Texture" id=2]
+
+[node name="Glowth" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Glowth"
+turns = 1
+icon = ExtResource( 2 )
+base_description = "50% DR. At the start of your turn, heal 20"
+crit_description = "50% DR. At the start of your turn, heal 30"

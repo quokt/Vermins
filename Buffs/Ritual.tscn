@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Ritual.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_94.png" type="Texture" id=2]
+
+[node name="Ritual" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+apply_mode = 5
+buff_name = "Ritual"
+turns = 3
+icon = ExtResource( 2 )
+description = "Heal 4 upon taking damage"
+base_description = "Heal 4 upon taking damage"
+crit_description = "Heal 6 upon taking damage"
+stack_mode = 1

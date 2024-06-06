@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Soup.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Soup.png" type="Texture" id=2]
+
+[node name="Soup" type="Node"]
+script = ExtResource( 1 )
+item_name = "Soup"
+item_texture = ExtResource( 2 )
+description = "+1 energy
++1 stamina
+"
+cost = 14

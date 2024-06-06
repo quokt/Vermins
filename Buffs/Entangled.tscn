@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Entangled.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_5.png" type="Texture" id=2]
+
+[node name="Entangled" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Entangled"
+turns = 3
+icon = ExtResource( 2 )
+base_description = "-2 stamina"
+crit_description = "-3 stamina"
+stack_mode = 1

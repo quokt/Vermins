@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/RedPotion.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Potion.png" type="Texture" id=2]
+
+[node name="RedPotion" type="Node"]
+script = ExtResource( 1 )
+item_name = "RedPotion"
+display_name = "Red Potion"
+item_texture = ExtResource( 2 )
+description = "+2 healing
++1 range"
+cost = 10

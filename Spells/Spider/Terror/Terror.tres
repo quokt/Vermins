@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/Fear.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 8
+min_range = 0
+max_range = 6
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Terror"
+spell_ID = "Terror"
+character = "Widow"
+description = "Enemies in the area lose 3 stamina"
+critical_effect = "Restore 2 energy"
+cost = 11
+anim_mode = 0
+cast_mode = 0
+cell_mode = 1
+energy_cost = 3
+sight_needed = false
+range_modif = false
+range_mode = 0
+max_per_turn = 0
+cooldown = 2
+min_power = 0
+max_power = 0
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 0
+aoe = 2
+aoe_mode = 0
+buff_name = "Terror"
+buff_targets = 1
+ai_targets = 1

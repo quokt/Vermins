@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Widow/Carnage/Carnage.gd" type="Script" id=1]
+
+[node name="Carnage" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Carnage"
+character = "Widow"

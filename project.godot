@@ -1,0 +1,250 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://Scripts/Actor.gd"
+}, {
+"base": "Button",
+"class": "ActorIcon",
+"language": "GDScript",
+"path": "res://Scripts/ActorIcon.gd"
+}, {
+"base": "Node",
+"class": "Buff",
+"language": "GDScript",
+"path": "res://Scripts/Buff.gd"
+}, {
+"base": "TextureButton",
+"class": "BuffButton",
+"language": "GDScript",
+"path": "res://Scripts/BuffButton.gd"
+}, {
+"base": "Button",
+"class": "Button3D",
+"language": "GDScript",
+"path": "res://Scripts/Button3D.gd"
+}, {
+"base": "Player",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Scripts/Enemy.gd"
+}, {
+"base": "Node",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Scripts/Item.gd"
+}, {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Scripts/Level.gd"
+}, {
+"base": "Node2D",
+"class": "Multiplayer",
+"language": "GDScript",
+"path": "res://Scripts/Multiplayer.gd"
+}, {
+"base": "Actor",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scripts/Player.gd"
+}, {
+"base": "Node2D",
+"class": "PropSprite",
+"language": "GDScript",
+"path": "res://Scripts/PropSprite.gd"
+}, {
+"base": "Player",
+"class": "Puppet",
+"language": "GDScript",
+"path": "res://Scripts/Puppet.gd"
+}, {
+"base": "Node2D",
+"class": "Singleplayer",
+"language": "GDScript",
+"path": "res://Scripts/Singleplayer.gd"
+}, {
+"base": "Node",
+"class": "Spell",
+"language": "GDScript",
+"path": "res://Scripts/Spell.gd"
+}, {
+"base": "TextureButton",
+"class": "SpellButton",
+"language": "GDScript",
+"path": "res://Scripts/SpellButton.gd"
+}, {
+"base": "Node2D",
+"class": "SpellFX",
+"language": "GDScript",
+"path": "res://Scripts/SpellFX.gd"
+}, {
+"base": "Resource",
+"class": "SpellResource",
+"language": "GDScript",
+"path": "res://Scripts/SpellResource.gd"
+}, {
+"base": "HBoxContainer",
+"class": "Spells_bar",
+"language": "GDScript",
+"path": "res://Scripts/Spells_UI.gd"
+} ]
+_global_script_class_icons={
+"Actor": "",
+"ActorIcon": "",
+"Buff": "",
+"BuffButton": "",
+"Button3D": "",
+"Enemy": "",
+"Item": "",
+"Level": "",
+"Multiplayer": "",
+"Player": "",
+"PropSprite": "",
+"Puppet": "",
+"Singleplayer": "",
+"Spell": "",
+"SpellButton": "",
+"SpellFX": "",
+"SpellResource": "",
+"Spells_bar": ""
+}
+
+[application]
+
+config/name="Vermins"
+run/main_scene="res://Scenes/TitleScreen.tscn"
+boot_splash/image="res://Assets/boot_bg.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
+
+[autoload]
+
+Display="*res://Scenes/Display.tscn"
+CombatPrinter="*res://Scenes/CombatPrinter.tscn"
+
+[debug]
+
+gdscript/warnings/unused_argument=false
+gdscript/warnings/return_value_discarded=false
+shapes/collision/shape_color=Color( 0, 0.623529, 0.72549, 0.419608 )
+multirun/number_of_windows=2
+multirun/window_distance=1270
+multirun/add_custom_args=true
+multirun/first_window_args="listen"
+multirun/other_window_args="join"
+
+[display]
+
+window/size/height=576
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/multirun/plugin.cfg" )
+
+[gui]
+
+theme/custom="res://Theme/default_theme.tres"
+theme/custom_font="res://Assets/pixel_font.tres"
+common/snap_controls_to_pixels=false
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+wav={
+"compress/mode": 0,
+"edit/loop_begin": 0,
+"edit/loop_end": -1,
+"edit/loop_mode": 0,
+"edit/normalize": false,
+"edit/trim": false,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
+}
+
+[input]
+
+mouse_right_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+escape={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+mouse_left_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+key_f={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+mousewheel_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+mousewheel_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+mousewheel_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":3,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/shadows/filter_mode=0
+2d/options/use_software_skinning=false
+batching/precision/uv_contract=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"

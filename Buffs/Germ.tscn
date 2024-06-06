@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_77.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Germ.gd" type="Script" id=2]
+
+[node name="Germ" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+apply_mode = 2
+buff_name = "Germ"
+buff_id = "Germ"
+turns = 3
+cooldown_mode = 1
+icon = ExtResource( 1 )
+base_description = "Take 4-6 damage at the end of your turn"
+crit_description = "Take 4-6 damage at the end of your turn"

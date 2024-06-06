@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Cocktail.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Cocktail.png" type="Texture" id=2]
+
+[node name="Cocktail" type="Node"]
+script = ExtResource( 1 )
+item_name = "Cocktail"
+item_texture = ExtResource( 2 )
+description = "+2 magic damage and damage reduction"
+cost = 12

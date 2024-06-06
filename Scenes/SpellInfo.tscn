@@ -1,0 +1,357 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/SpellInfo.gd" type="Script" id=2]
+[ext_resource path="res://Assets/pixel_font_b2.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/UI/@pixel_iwart/bars.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/@pixel_iwart/UIv2-Sheet.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/SpellButton.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_85.png" type="Texture" id=8]
+[ext_resource path="res://Assets/pixel_font.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Assets/pixel_font_dynamic.tres" type="DynamicFontData" id=10]
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 161, 257, 30, 30 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 388, 196, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 5 )
+region = Rect2( 222, 64, 32, 15 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 5, 35, 54, 15 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 5, 35, 54, 15 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 388, 196, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 6 )
+region = Rect2( 223, 160, 97, 32 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 6 )
+region = Rect2( 472, 259, 8, 9 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 10 )
+
+[node name="SpellInfo" type="Node2D"]
+z_index = 2
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 2.25, 2.06 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 524289, 3, 0, 1, 4, 0, 2, 65536, 0, 458754, 65537, 0, 65537, 65538, 0, 65537, 65539, 0, 65537, 65540, 0, 65538, 131072, 0, 458754, 131073, 0, 65537, 131074, 0, 65537, 131075, 0, 65537, 131076, 0, 65538, 196608, 0, 65536, 196609, 0, 65537, 196610, 0, 65537, 196611, 0, 65537, 196612, 0, 65538, 262144, 0, 458754, 262145, 0, 65537, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65538, 327680, 0, 458754, 327681, 0, 65537, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 458752, 393216, 0, 131072, 393217, 0, 131073, 393218, 0, 131073, 393219, 0, 393217, 393220, 0, 131074 )
+
+[node name="Shadow" type="TileMap" parent="TileMap"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 8, 8 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 524289, 2, 0, 1, 3, 0, 1, 4, 0, 2, 65536, 0, 458754, 65537, 0, 65537, 65538, 0, 65537, 65539, 0, 65537, 65540, 0, 65538, 131072, 0, 458754, 131073, 0, 65537, 131074, 0, 65537, 131075, 0, 65537, 131076, 0, 65538, 196608, 0, 458754, 196609, 0, 65537, 196610, 0, 65537, 196611, 0, 65537, 196612, 0, 458752, 262144, 0, 65536, 262145, 0, 65537, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65538, 327680, 0, 65536, 327681, 0, 65537, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 65538, 393216, 0, 131072, 393217, 0, 393217, 393218, 0, 393217, 393219, 0, 131073, 393220, 0, 131074 )
+
+[node name="Name_Bg" type="TileMap" parent="."]
+position = Vector2( -128, -54 )
+scale = Vector2( 2.12, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65538, 1, 262144, 65539, 1, 262145, 65540, 1, 262145, 65541, 1, 262145, 65542, 1, 262146 )
+
+[node name="Shadow" type="TileMap" parent="Name_Bg"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65538, 1, 262144, 65539, 1, 262145, 65540, 1, 262145, 65541, 1, 262145, 65542, 1, 262146 )
+
+[node name="Name" type="Label" parent="."]
+margin_left = -18.0
+margin_top = 4.0
+margin_right = 192.0
+margin_bottom = 42.0
+rect_scale = Vector2( 1.9, 1.9 )
+rect_pivot_offset = Vector2( 1.9, 0 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Dark sight"
+align = 1
+valign = 1
+
+[node name="Info_Bg" type="TileMap" parent="."]
+position = Vector2( 9, 5 )
+scale = Vector2( 2.12, 2.4 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65536, 1, 0, 65537, 1, 1, 65538, 1, 1, 65539, 1, 1, 65540, 1, 262146, 131072, 1, 131072, 131073, 1, 393217, 131074, 1, 131073, 131075, 1, 131074 )
+
+[node name="Shadow" type="TileMap" parent="Info_Bg"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65536, 1, 0, 65537, 1, 524289, 65538, 1, 524289, 65539, 1, 0, 65540, 1, 262146, 131072, 1, 131072, 131073, 1, 131073, 131074, 1, 393217, 131075, 1, 131074 )
+
+[node name="SpellButton" type="TextureButton" parent="."]
+margin_left = 275.0
+margin_top = 160.0
+margin_right = 341.0
+margin_bottom = 226.0
+expand = true
+script = ExtResource( 7 )
+
+[node name="Bg" type="Sprite" parent="SpellButton"]
+show_behind_parent = true
+position = Vector2( 33, 35 )
+scale = Vector2( 2.7, 2.6 )
+texture = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shadow" type="Sprite" parent="SpellButton/Bg"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 1.52381, 1.53846 )
+texture = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SpellIcon" type="Sprite" parent="SpellButton/Bg"]
+position = Vector2( 0, -1.15849 )
+scale = Vector2( 1, 1.05 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="Shadow" type="Sprite" parent="SpellButton"]
+modulate = Color( 0, 0, 0, 0.784314 )
+show_behind_parent = true
+position = Vector2( 36, 35.75 )
+scale = Vector2( 2.58333, 2.4375 )
+texture = SubResource( 6 )
+
+[node name="Energy" type="Sprite" parent="."]
+position = Vector2( 271, 118 )
+scale = Vector2( 3.6, 3.88333 )
+texture = SubResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="Energy"]
+modulate = Color( 0, 0, 0, 0.627451 )
+show_behind_parent = true
+position = Vector2( 1.11111, 1 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Energy" type="Label" parent="Energy"]
+margin_left = 3.88889
+margin_top = -7.21031
+margin_right = 16.8889
+margin_bottom = 20.909
+rect_scale = Vector2( 0.44, 0.44 )
+text = "6"
+
+[node name="Type" type="Sprite" parent="."]
+position = Vector2( 111, 118 )
+scale = Vector2( 3.475, 3.51667 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Sprite" parent="Type"]
+modulate = Color( 0, 0, 0, 0.627451 )
+show_behind_parent = true
+position = Vector2( 1.11111, 1 )
+texture = SubResource( 3 )
+
+[node name="Type" type="Label" parent="Type"]
+margin_left = -8.05756
+margin_top = -5.6872
+margin_right = 83.9424
+margin_bottom = 22.3128
+rect_scale = Vector2( 0.34, 0.34 )
+text = "PSYCHIC"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 7.0
+margin_top = 147.0
+margin_right = 303.0
+margin_bottom = 282.0
+rect_scale = Vector2( 0.9, 0.9 )
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 296.0
+margin_bottom = 121.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/separation = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Range" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_right = 296.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 9 )
+text = "RANGE : 1-5 *"
+align = 1
+
+[node name="Targets" type="Label" parent="ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 31.0
+margin_right = 289.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 0.839216, 0.160784, 0.878431, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "TARGETS : Enemies"
+align = 1
+
+[node name="AOE" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 31.0
+margin_right = 296.0
+margin_bottom = 59.0
+custom_fonts/font = ExtResource( 9 )
+text = "AREA OF EFFECT : 2"
+align = 1
+
+[node name="Cooldown" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 296.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 9 )
+text = "CoolDown : 0"
+align = 1
+
+[node name="DamageType" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 93.0
+margin_right = 296.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0.521569, 0.152941, 0.8, 1 )
+custom_fonts/font = ExtResource( 3 )
+
+[node name="Description_Bg" type="TileMap" parent="."]
+position = Vector2( 10, 44 )
+scale = Vector2( 2.1, 2.1 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196608, 1, 0, 196609, 1, 1, 196610, 1, 524289, 196611, 1, 1, 196612, 1, 2, 262144, 1, 458754, 262145, 1, 65537, 262146, 1, 65537, 262147, 1, 65537, 262148, 1, 65538, 327680, 1, 131072, 327681, 1, 393217, 327682, 1, 393217, 327683, 1, 393217, 327684, 1, 131074 )
+
+[node name="Shadow" type="TileMap" parent="Description_Bg"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196608, 1, 0, 196609, 1, 524289, 196610, 1, 524289, 196611, 1, 524289, 196612, 1, 2, 262144, 1, 65536, 262145, 1, 65537, 262146, 1, 65537, 262147, 1, 65537, 262148, 1, 65538, 327680, 1, 131072, 327681, 1, 393217, 327682, 1, 131073, 327683, 1, 393217, 327684, 1, 131074 )
+
+[node name="Critical" type="Sprite" parent="."]
+position = Vector2( 310, 410 )
+scale = Vector2( 1.9, 1.9 )
+texture = SubResource( 4 )
+
+[node name="Shadow" type="Sprite" parent="Critical"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+texture = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Critical"]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = -9.0
+margin_top = -12.0
+margin_right = 9.0
+margin_bottom = 16.0
+rect_scale = Vector2( 1, 0.8 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "!"
+align = 1
+valign = 1
+
+[node name="MouseDetect" type="Control" parent="Critical"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.0
+margin_top = -12.0
+margin_right = -12.0
+margin_bottom = -12.0
+
+[node name="Popup" type="Sprite" parent="Critical"]
+visible = false
+position = Vector2( -77.3684, -7.36841 )
+scale = Vector2( 1.3, 1.3 )
+texture = SubResource( 8 )
+
+[node name="Label" type="Label" parent="Critical/Popup"]
+margin_left = -46.6625
+margin_top = -14.4715
+margin_right = 111.337
+margin_bottom = 36.5285
+rect_scale = Vector2( 0.55, 0.55 )
+custom_fonts/font = SubResource( 9 )
+text = "Critical : you gain 30 health instead"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="Fg" type="Sprite" parent="Critical/Popup"]
+position = Vector2( 44.0309, -10.0191 )
+scale = Vector2( 0.992222, 1 )
+z_index = 1
+texture = SubResource( 10 )
+
+[node name="Description" type="Label" parent="."]
+margin_left = 19.0
+margin_top = 251.0
+margin_right = 219.0
+margin_bottom = 370.0
+rect_scale = Vector2( 1.6, 1.6 )
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 7 )
+text = "Deal damage.
+Famished: You gain +1 max health for each target
+Engorged: The damage is boosted by your current amount of health."
+valign = 1
+autowrap = true
+
+[connection signal="mouse_entered" from="Critical/MouseDetect" to="." method="_on_MouseDetect_mouse_entered"]
+[connection signal="mouse_exited" from="Critical/MouseDetect" to="." method="_on_MouseDetect_mouse_exited"]

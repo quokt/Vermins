@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Mark.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_23.png" type="Texture" id=2]
+
+[node name="Mark" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Mark"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "You can't be moved by spells"
+crit_description = "You can't be moved by spells"
+stack_mode = 1

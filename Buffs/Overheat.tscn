@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Overheat.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_63.png" type="Texture" id=2]
+
+[node name="Overheat" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Overheat"
+turns = 1
+icon = ExtResource( 2 )
+description = "2x damage inflicted, 2x damage received"
+base_description = "2x damage inflicted, 2x damage received"
+crit_description = "2x damage inflicted"
+stack_mode = 1

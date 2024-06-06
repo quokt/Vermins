@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_49.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Crippled.gd" type="Script" id=2]
+
+[node name="Crippled" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Crippled"
+turns = 2
+icon = ExtResource( 1 )
+description = "-1 stamina. Deal 25% less damage"
+base_description = "-1 stamina. Deal 25% less damage"
+crit_description = "-1 stamina. Deal 40% less damage"

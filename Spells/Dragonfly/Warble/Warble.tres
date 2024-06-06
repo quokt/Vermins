@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_71.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = true
+spell_effects = 10
+min_range = 1
+max_range = 5
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Warble"
+spell_ID = "Warble"
+character = "Dragonfly"
+description = "Heal allies in the area. They receive 15% more healing for two turns (can stack twice)"
+critical_effect = "20% bonus healing instead"
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 3
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 2
+cooldown = 0
+min_power = 4
+max_power = 6
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 1
+aoe = 2
+aoe_mode = 0
+buff_name = "Warble"
+buff_targets = 2
+ai_targets = 2

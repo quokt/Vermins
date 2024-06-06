@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_10.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+base_spell = false
+spell_effects = 4
+min_range = 1
+max_range = 2
+icon = ExtResource( 1 )
+animation = ""
+spell_name = "Hover"
+spell_ID = "Hover"
+character = "Fly"
+description = "Teleport to your target "
+critical_effect = "Gain 1 energy back"
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 0
+energy_cost = 1
+sight_needed = false
+range_modif = false
+range_mode = 0
+max_per_turn = 2
+cooldown = 0
+min_power = 0
+max_power = 0
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 1
+aoe = 0
+aoe_mode = 0
+buff_name = ""
+buff_targets = 0
+ai_targets = 5

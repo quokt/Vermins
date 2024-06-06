@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Puppets/Leech/Suction/Suction.gd" type="Script" id=1]
+
+[node name="Suction" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Suction"
+character = "Leech"
+_puppet = true

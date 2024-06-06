@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_73.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Weak.gd" type="Script" id=2]
+
+[node name="Weak" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Weak"
+turns = 2
+icon = ExtResource( 1 )
+base_description = "Take 25% more damage"
+crit_description = "Take 25% more damage"
+max_stack = 3

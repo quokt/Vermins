@@ -1,0 +1,41 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_13.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+base_spell = false
+spell_effects = 0
+min_range = 0
+max_range = 0
+icon = ExtResource( 1 )
+animation = ""
+spell_name = "Crab"
+spell_ID = "Crab"
+character = "Tick"
+description = "Deal damage in an area.
+Famished: The damage is boosted by your current amount of health
+Engorged: Allies are healed instead."
+critical_effect = "More damage and healing"
+cost = 11
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 4
+sight_needed = false
+range_modif = false
+range_mode = 0
+max_per_turn = 2
+cooldown = 0
+min_power = 10
+max_power = 14
+crit_min_power = 16
+crit_max_power = 18
+crit_chance = 0.1
+spell_type = 1
+aoe = 3
+aoe_mode = 0
+buff_name = ""
+buff_targets = 0
+ai_targets = 1

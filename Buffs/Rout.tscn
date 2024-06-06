@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Rout.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_99.png" type="Texture" id=2]
+
+[node name="Rout" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+remove_mode = 1
+buff_name = "Rout"
+turns = -1
+icon = ExtResource( 2 )
+description = "Avoid your next hit."
+base_description = "Avoid your next hit."
+crit_description = "Avoid your next two hits."
+stack_mode = 3

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_97.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 0
+min_range = 0
+max_range = 4
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Shatter"
+spell_ID = "Shatter"
+character = "Moskito"
+description = "Deal damage in an area. This spell deals more damage the closer you are to full health."
+critical_effect = "More base damage"
+cost = 7
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 4
+sight_needed = true
+range_modif = true
+range_mode = 1
+max_per_turn = 1
+cooldown = 0
+min_power = 5
+max_power = 6
+crit_min_power = 7
+crit_max_power = 8
+crit_chance = 0.1
+spell_type = 1
+aoe = 4
+aoe_mode = 2
+buff_name = ""
+buff_targets = 0
+ai_targets = 1

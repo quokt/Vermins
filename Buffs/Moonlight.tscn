@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Moonlight.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_47.png" type="Texture" id=2]
+
+[node name="Moonlight" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Moonlight"
+icon = ExtResource( 2 )
+max_stack = 3
+caster_description = "5% damage reduction (all types)"
+caster_crit_description = "8% damage reduction (all types)"
+target_description = "You deal 15% less damage. Disappears only on the widow's death."
+target_crit_description = "You deal 20% less damage. Disappears only on the widow's death."
+caster_max_stack = 5
+target_max_stack = 3

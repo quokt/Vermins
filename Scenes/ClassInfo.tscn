@@ -1,0 +1,361 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/ClassInfo.gd" type="Script" id=1]
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/@pixel_iwart/UIv2-Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/@pixel_iwart/bars.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/BaseSpellInfo.tscn" type="PackedScene" id=6]
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 224, 150, 17, 10 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 472, 259, 8, 9 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 5 )
+region = Rect2( 40, 81, 31, 15 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 43, 16, 31, 15 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 222, 2, 32, 13 )
+
+[node name="ClassInfo" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 1.02, 0.94 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 524289, 3, 0, 524289, 4, 0, 2, 65536, 0, 65536, 65537, 0, 65537, 65538, 0, 65537, 65539, 0, 65537, 65540, 0, 65538, 131072, 0, 131072, 131073, 0, 393218, 131074, 0, 65537, 131075, 0, 65537, 131076, 0, 65538, 196609, 0, 131072, 196610, 0, 393217, 196611, 0, 131073, 196612, 0, 131074 )
+
+[node name="Shadow" type="TileMap" parent="TileMap"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 4, 4 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 524289, 3, 0, 524289, 4, 0, 2, 65536, 0, 65536, 65537, 0, 65537, 65538, 0, 65537, 65539, 0, 65537, 65540, 0, 65538, 131072, 0, 131072, 131073, 0, 393218, 131074, 0, 65537, 131075, 0, 65537, 131076, 0, 458752, 196609, 0, 131072, 196610, 0, 131073, 196611, 0, 393217, 196612, 0, 131074 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( 4, 4 )
+scale = Vector2( 1.18, 1.18 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 262144, 1, 1, 262145, 2, 1, 262145, 3, 1, 262146 )
+
+[node name="Label" type="Label" parent="TileMap2"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 137.0
+margin_bottom = 30.0
+rect_scale = Vector2( 0.9, 0.9 )
+text = "Cockroach"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="TileMap2/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+text = "Cockroach"
+align = 1
+valign = 1
+
+[node name="Shadow" type="TileMap" parent="TileMap2"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 4, 3 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 262144, 1, 1, 262145, 2, 1, 262145, 3, 1, 262146 )
+
+[node name="Fg2" type="Sprite" parent="TileMap2"]
+position = Vector2( 8.99399, 27.0136 )
+scale = Vector2( 1.00061, 0.997159 )
+z_index = 7
+texture = SubResource( 5 )
+
+[node name="Fg" type="Sprite" parent="TileMap2"]
+position = Vector2( 124.027, 5.99108 )
+scale = Vector2( 0.994052, 0.99783 )
+z_index = 7
+texture = SubResource( 4 )
+
+[node name="TileMap4" type="TileMap" parent="."]
+position = Vector2( 4, 6 )
+scale = Vector2( 1.2, 1.2 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65536, 1, 262144, 65537, 1, 262145, 65538, 1, 262145, 65539, 1, 262146 )
+
+[node name="Fg" type="Sprite" parent="TileMap4"]
+position = Vector2( 124.02, 36.9575 )
+scale = Vector2( 0.995757, 0.975556 )
+z_index = 8
+texture = SubResource( 4 )
+
+[node name="Fg2" type="Sprite" parent="TileMap4"]
+position = Vector2( 8.97462, 59.012 )
+scale = Vector2( 0.995528, 0.997309 )
+z_index = 8
+texture = SubResource( 5 )
+
+[node name="Shadow" type="TileMap" parent="TileMap4"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 3, 4 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65536, 1, 262144, 65537, 1, 262145, 65538, 1, 262145, 65539, 1, 262146 )
+
+[node name="Stamina" type="Sprite" parent="."]
+position = Vector2( 133, 62 )
+scale = Vector2( 1.4, 1.7 )
+z_index = 7
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Sprite" parent="Stamina"]
+modulate = Color( 0, 0, 0, 0.823529 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+z_index = 6
+z_as_relative = false
+texture = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Stamina"]
+margin_left = 2.82486
+margin_top = -7.26392
+margin_right = 17.8249
+margin_bottom = 20.7361
+rect_scale = Vector2( 0.5, 0.4 )
+text = "3"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="Stamina/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 1.87494
+margin_top = 1.62972
+margin_right = 14.8749
+margin_bottom = 60.6297
+text = "3
+"
+
+[node name="Energy" type="Sprite" parent="."]
+position = Vector2( 89, 62 )
+scale = Vector2( 1.4, 1.7 )
+z_index = 7
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Sprite" parent="Energy"]
+modulate = Color( 0, 0, 0, 0.823529 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+z_index = 6
+z_as_relative = false
+texture = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Energy"]
+margin_left = 2.82486
+margin_top = -7.26392
+margin_right = 17.8249
+margin_bottom = 20.7361
+rect_scale = Vector2( 0.5, 0.4 )
+text = "3"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="Energy/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 1.87494
+margin_top = 1.62972
+margin_right = 14.8749
+margin_bottom = 60.6297
+text = "3
+"
+
+[node name="Health" type="Sprite" parent="."]
+position = Vector2( 36, 62 )
+scale = Vector2( 1.86, 1.92 )
+z_index = 7
+texture = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Sprite" parent="Health"]
+modulate = Color( 0, 0, 0, 0.823529 )
+show_behind_parent = true
+position = Vector2( 2, 1 )
+z_index = 6
+z_as_relative = false
+texture = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Health"]
+margin_left = -0.0912666
+margin_top = -7.43614
+margin_right = 26.9087
+margin_bottom = 20.5639
+rect_scale = Vector2( 0.4, 0.4 )
+text = "80"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="Health/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 1.87494
+margin_top = 1.62972
+margin_right = 14.8749
+margin_bottom = 60.6297
+text = "3
+"
+
+[node name="TileMap3" type="TileMap" parent="."]
+visible = false
+position = Vector2( 4, 6 )
+scale = Vector2( 1.19, 1.18 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131072, 1, 0, 131073, 1, 524289, 131074, 1, 1, 131075, 1, 2, 196608, 1, 131072, 196609, 1, 393217, 196610, 1, 393217, 196611, 1, 131074 )
+
+[node name="Fg2" type="Sprite" parent="TileMap3"]
+position = Vector2( 8.98839, 122.981 )
+scale = Vector2( 0.998701, 1 )
+z_index = 2
+texture = SubResource( 5 )
+
+[node name="Fg" type="Sprite" parent="TileMap3"]
+position = Vector2( 124.019, 69.0038 )
+scale = Vector2( 0.996496, 1.0004 )
+z_index = 2
+texture = SubResource( 4 )
+
+[node name="Shadow" type="TileMap" parent="TileMap3"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 3, 4 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131072, 1, 0, 131073, 1, 524289, 131074, 1, 1, 131075, 1, 2, 196608, 1, 131072, 196609, 1, 393217, 196610, 1, 393217, 196611, 1, 131074 )
+
+[node name="Description" type="Label" parent="."]
+visible = false
+margin_left = 7.56123
+margin_top = 82.4251
+margin_right = 373.561
+margin_bottom = 265.425
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Switch between two forms:
+famished: +1 damage reduction
+engorged: +1 damage and healing"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="Description"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+text = "Switch between two forms:
+famished: +1 damage reduction
+engorged: +1 damage and healing"
+valign = 1
+autowrap = true
+
+[node name="TileMap5" type="TileMap" parent="."]
+position = Vector2( 4, -71 )
+scale = Vector2( 0.97, 0.97 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 327681, 1, 262144, 327682, 1, 262145, 327683, 1, 262145, 327684, 1, 262146 )
+
+[node name="Fg2" type="Sprite" parent="TileMap5"]
+position = Vector2( 41.0781, 187.025 )
+scale = Vector2( 0.999457, 0.996124 )
+z_index = 2
+texture = SubResource( 5 )
+
+[node name="Fg" type="Sprite" parent="TileMap5"]
+position = Vector2( 155.999, 165.99 )
+scale = Vector2( 0.997934, 0.994646 )
+z_index = 2
+texture = SubResource( 4 )
+
+[node name="Shadow" type="TileMap" parent="TileMap5"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 2, 4 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 327681, 1, 262144, 327682, 1, 262145, 327683, 1, 262145, 327684, 1, 262146 )
+
+[node name="Initiative" type="Label" parent="."]
+margin_left = 42.097
+margin_top = 89.3627
+margin_right = 220.096
+margin_bottom = 117.363
+rect_scale = Vector2( 0.72, 0.72 )
+text = "Initiative: -1"
+valign = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="Initiative"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 155.0
+margin_bottom = 62.0
+text = "Initiative: -1
+"
+
+[node name="BaseSpellInfo" parent="." instance=ExtResource( 6 )]
+position = Vector2( 40.8787, 121.453 )
+scale = Vector2( 0.92, 0.92 )

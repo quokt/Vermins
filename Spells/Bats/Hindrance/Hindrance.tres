@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_29.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 8
+min_range = 1
+max_range = 8
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Hindrance"
+spell_ID = "Hindrance"
+character = "Bats"
+description = "Enemies in the area loose 2 range for 2 turns and take damage"
+critical_effect = "3 range instead, more damage"
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 3
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 0
+cooldown = 4
+min_power = 2
+max_power = 4
+crit_min_power = 5
+crit_max_power = 6
+crit_chance = 0.1
+spell_type = 1
+aoe = 2
+aoe_mode = 0
+buff_name = "Hindrance"
+buff_targets = 1

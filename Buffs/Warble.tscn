@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_71.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Warble.gd" type="Script" id=2]
+
+[node name="Warble" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Warble"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 1 )
+description = "Receive 20% more healing"
+base_description = "Receive 15% more healing."
+crit_description = "Receive 20% more healing."
+max_stack = 2

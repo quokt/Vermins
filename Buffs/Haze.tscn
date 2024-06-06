@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_3.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Haze.gd" type="Script" id=2]
+
+[node name="Haze" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+apply_mode = 1
+buff_name = "Haze"
+turns = 2
+icon = ExtResource( 1 )
+base_description = "At the start of your turn, take 4 damage"
+crit_description = "At the start of your turn, take 6 damage"

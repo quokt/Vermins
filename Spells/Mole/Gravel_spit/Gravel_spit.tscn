@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Mole/Gravel_spit/Gravel_spit.gd" type="Script" id=1]
+
+[node name="Gravel_spit" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Gravel_spit"
+character = "Mole"

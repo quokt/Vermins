@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Turnip.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Turnip.png" type="Texture" id=2]
+
+[node name="Turnip" type="Node"]
+script = ExtResource( 1 )
+item_name = "Turnip"
+item_texture = ExtResource( 2 )
+description = "+2 stamina"
+cost = 10

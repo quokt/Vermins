@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Cake.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Cake.png" type="Texture" id=2]
+
+[node name="Cake" type="Node"]
+script = ExtResource( 1 )
+item_name = "Cake"
+item_texture = ExtResource( 2 )
+description = "-10 health
++2 healing"
+cost = 4

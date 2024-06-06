@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Items/Grapes.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/ItemIcon.gd" type="Script" id=2]
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Items/Kiwi.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 352, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 448, 258, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 360, 200, 15, 15 )
+
+[node name="ItemIcon" type="TextureButton"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.011
+anchor_top = 0.017
+anchor_right = 0.011
+anchor_bottom = 0.017
+margin_left = -9.264
+margin_top = -8.2
+margin_right = 8.736
+margin_bottom = 8.8
+texture_normal = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 7.875, 8 )
+scale = Vector2( 0.632812, 0.625 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fg" type="Sprite" parent="Bg"]
+position = Vector2( -9.53674e-07, -2.5034e-06 )
+z_index = 1
+texture = SubResource( 3 )
+
+[node name="ItemIcon" type="Sprite" parent="."]
+position = Vector2( 7.5, 7.5 )
+scale = Vector2( 0.9375, 0.928571 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shadow" type="Sprite" parent="ItemIcon"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 1, 1 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RedCross" type="Sprite" parent="."]
+visible = false
+position = Vector2( 8.38014, 8.62903 )
+scale = Vector2( 1.23141, 1.19585 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}

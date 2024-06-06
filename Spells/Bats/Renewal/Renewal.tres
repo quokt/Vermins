@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_26.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 0
+min_range = 1
+max_range = 1
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Renewal"
+spell_ID = "Renewal"
+character = "Bats"
+description = "Summon a controllable bat."
+critical_effect = "Reduce cooldown by 1"
+cost = 7
+anim_mode = 0
+cast_mode = 0
+cell_mode = 0
+energy_cost = 4
+sight_needed = false
+range_modif = false
+range_mode = 0
+max_per_turn = 0
+cooldown = 4
+min_power = 0
+max_power = 0
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 1
+aoe = 0
+aoe_mode = 0
+buff_name = ""
+buff_targets = 0
+ai_targets = 5

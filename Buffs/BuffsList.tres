@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Buffs/BuffsList.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+buffs_list = [ "Acid", "Burned", "Clot", "Conviction", "Crippled", "Dark_sight", "Disturbed", "Dusk", "Eggling", "Entangled", "Exposed", "Frozen", "Haze", "Hindrance", "Holy_sight", "Marked", "Moonlight", "Overheat", "Poison", "Pressurized", "Rejuvenate", "Ritual", "Rout", "Rush", "Third_eye", "Warble", "Weak_mind", "Weak_poison", "Bark", "Bulk", "Ebb", "Glowth", "Hail", "Miracle", "Obstruction", "Ricochet", "Shadow", "Shelter", "Slash", "Spine", "Vector", "Weak" ]

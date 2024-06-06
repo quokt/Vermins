@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Weak_poison.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_1.png" type="Texture" id=2]
+
+[node name="Weak_poison" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+apply_mode = 1
+buff_name = "Weak Poison"
+buff_id = "Weak_poison"
+turns = 3
+cooldown_mode = 1
+icon = ExtResource( 2 )
+max_stack = 3
+lethality = false

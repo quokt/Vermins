@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_100.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 0
+min_range = 1
+max_range = 2
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Steel"
+spell_ID = "Steel"
+character = "Moskito"
+description = "Deal 3 to 5 damage, 3 times."
+critical_effect = "4 times instead"
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 1
+energy_cost = 4
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 0
+cooldown = 1
+min_power = 3
+max_power = 5
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 0
+aoe = 0
+aoe_mode = 0
+buff_name = ""
+buff_targets = 0
+ai_targets = 1

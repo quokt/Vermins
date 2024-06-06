@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Shadow.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_9.png" type="Texture" id=2]
+
+[node name="Shadow" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Shadow"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 2 )
+description = "Transfer any damage you take"
+base_description = "Transfer any damage you take"
+crit_description = "Transfer any damage you take"
+stack_mode = 3

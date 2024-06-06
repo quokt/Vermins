@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Fly/Conviction/Conviction.gd" type="Script" id=1]
+
+[node name="Conviction" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Conviction"
+character = "Fly"

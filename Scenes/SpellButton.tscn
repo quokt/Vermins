@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/SpellButton.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_5.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Icons/Cairn.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Icons/Fear.png" type="Texture" id=5]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 353, 257, 30, 30 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 417, 318, 30, 30 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 360, 200, 15, 15 )
+
+[node name="SpellButton" type="TextureButton"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -998.0
+margin_bottom = -575.0
+rect_min_size = Vector2( 24, 0 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 14, 14 )
+scale = Vector2( 0.966667, 1 )
+texture = SubResource( 2 )
+
+[node name="Bg" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 12.5, 12 )
+scale = Vector2( 0.966667, 1 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fg" type="Sprite" parent="Bg"]
+show_behind_parent = true
+position = Vector2( -15, 10 )
+z_index = 1
+texture = SubResource( 3 )
+offset = Vector2( 15.5172, -10 )
+
+[node name="SpellIcon" type="Sprite" parent="Bg"]
+position = Vector2( -0.3, 0.1 )
+texture = ExtResource( 5 )
+
+[node name="Shadow2" type="Sprite" parent="Bg/SpellIcon"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 0.517241, 1 )
+scale = Vector2( 1.03448, 1 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RedCross" type="Sprite" parent="Bg"]
+visible = false
+position = Vector2( 0.741381, 1.45777 )
+scale = Vector2( 1.74138, 1.64889 )
+z_index = 1
+texture = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 22.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Viper/Sink/Sink.gd" type="Script" id=1]
+
+[node name="Sink" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Sink"
+character = "Viper"

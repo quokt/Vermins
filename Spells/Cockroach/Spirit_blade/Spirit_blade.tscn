@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Cockroach/Spirit_blade/Spirit_blade.gd" type="Script" id=1]
+
+[node name="Spirit_blade" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Spirit_blade"
+character = "Cockroach"

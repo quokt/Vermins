@@ -1,0 +1,125 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://tileset_v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/MapEditor.gd" type="Script" id=2]
+[ext_resource path="res://tileset_v2_h1.tres" type="TileSet" id=3]
+[ext_resource path="res://Scripts/Tool.gd" type="Script" id=4]
+[ext_resource path="res://tileset_starting_pos.tres" type="TileSet" id=5]
+[ext_resource path="res://tileset_props.tres" type="TileSet" id=6]
+[ext_resource path="res://Shaders/props_material.tres" type="Material" id=7]
+
+[node name="MapEditor" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+load_map_name = "funtain"
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, -8 )
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -589814, 13, 8, -589813, 13, 65536, -589812, 13, 6, -589811, 13, 4, -524279, 13, 65536, -524278, 13, 6, -524277, 13, 6, -524276, 13, 4, -524275, 13, 7, -524274, 13, 5, -458744, 13, 6, -458743, 13, 65536, -458742, 13, 65536, -458741, 13, 8, -458740, 13, 4, -458739, 13, 5, -458738, 13, 7, -458737, 13, 4, -393209, 13, 6, -393208, 13, 4, -393207, 13, 65536, -393206, 13, 4, -393205, 13, 6, -393204, 13, 7, -393203, 13, 65536, -393202, 13, 6, -393201, 13, 8, -393200, 13, 5, -327674, 13, 8, -327673, 13, 4, -327672, 13, 5, -327671, 13, 7, -327670, 13, 8, -327669, 13, 5, -327668, 13, 8, -327667, 13, 5, -327666, 13, 4, -327665, 13, 7, -327664, 13, 5, -327663, 13, 5, -262139, 13, 8, -262138, 13, 7, -262137, 13, 8, -262136, 13, 5, -262135, 13, 8, -262134, 13, 4, -262133, 13, 7, -262132, 13, 65536, -262131, 13, 8, -262130, 13, 6, -262129, 13, 65536, -262128, 13, 6, -262127, 13, 4, -262126, 13, 8, -196604, 13, 8, -196603, 13, 4, -196602, 13, 4, -196601, 13, 6, -196600, 13, 6, -196595, 13, 4, -196594, 13, 6, -196593, 13, 5, -196592, 13, 7, -196591, 13, 7, -196590, 13, 6, -196589, 13, 6, -131069, 13, 4, -131068, 13, 6, -131067, 13, 7, -131066, 13, 65536, -131065, 13, 5, -131064, 13, 4, -131058, 13, 7, -131057, 13, 6, -131056, 13, 6, -131055, 13, 65536, -131054, 13, 5, -131053, 13, 8, -131052, 13, 65536, -65533, 13, 4, -65532, 13, 65536, -65531, 13, 8, -65530, 13, 4, -65529, 13, 6, -65528, 13, 8, -65523, 0, 7, -65521, 13, 65536, -65520, 13, 65536, -65519, 13, 6, -65518, 13, 7, -65517, 13, 65536, -65516, 13, 6, -65515, 13, 7, 3, 13, 6, 4, 13, 7, 5, 13, 4, 6, 13, 5, 7, 13, 8, 8, 13, 8, 13, 0, 5, 16, 16, 65536, 17, 13, 6, 18, 13, 8, 19, 13, 6, 20, 13, 8, 21, 13, 6, 65539, 13, 6, 65540, 13, 5, 65541, 13, 6, 65542, 13, 5, 65543, 13, 6, 65544, 13, 7, 65545, 13, 4, 65548, 0, 7, 65549, 0, 4, 65552, 16, 65536, 65553, 13, 8, 65554, 13, 4, 65555, 13, 6, 65556, 13, 7, 65557, 13, 8, 131076, 13, 8, 131077, 13, 5, 131078, 13, 7, 131079, 13, 6, 131080, 13, 65536, 131081, 13, 5, 131088, 16, 65536, 131089, 13, 5, 131090, 13, 5, 131091, 13, 4, 131092, 13, 8, 131093, 13, 65536, 196613, 13, 65536, 196614, 13, 8, 196615, 13, 6, 196616, 13, 7, 196617, 13, 6, 196618, 16, 65536, 196619, 16, 65536, 196620, 16, 65536, 196623, 16, 65536, 196624, 13, 7, 196625, 13, 5, 196626, 13, 8, 196627, 13, 65536, 196628, 13, 65536, 262150, 13, 65536, 262151, 13, 7, 262152, 13, 65536, 262153, 13, 5, 262154, 13, 6, 262155, 13, 6, 262156, 13, 65536, 262157, 16, 65536, 262158, 16, 8, 262159, 13, 8, 262160, 13, 5, 262161, 13, 4, 262162, 13, 65536, 262163, 13, 6, 327687, 13, 5, 327688, 13, 8, 327689, 13, 65536, 327690, 13, 65536, 327691, 13, 6, 327692, 13, 5, 327693, 13, 65536, 327694, 13, 7, 327695, 13, 7, 327696, 13, 4, 327697, 13, 4, 327698, 13, 6, 393224, 13, 8, 393225, 13, 7, 393226, 13, 65536, 393227, 13, 7, 393228, 13, 6, 393229, 13, 8, 393230, 13, 8, 393231, 13, 4, 393232, 13, 7, 393233, 13, 7, 458761, 13, 5, 458762, 13, 4, 458763, 13, 65536, 458764, 13, 6, 458765, 13, 7, 458766, 13, 5, 458767, 13, 4, 458768, 13, 7, 524298, 13, 65536, 524299, 13, 6, 524300, 13, 8, 524301, 13, 5, 524302, 13, 65536, 524303, 13, 4, 589835, 13, 6, 589836, 13, 5, 589837, 13, 8, 589838, 13, 5 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Landscape" type="TileMap" parent="TileMap"]
+modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+show_collision = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 65550, 24, 65536, 65551, 24, 65536, 131083, 24, 327680, 131084, 24, 327680, 131085, 24, 327680, 131086, 24, 65536, 131087, 24, 65536, 196621, 24, 327680, 196622, 24, 327680 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Level1" type="TileMap" parent="TileMap"]
+modulate = Color( 0.698039, 0.698039, 0.698039, 1 )
+mode = 1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -196599, 3, 65537, -196598, 3, 65537, -196597, 3, 65537, -196596, 3, 65537, -131063, 3, 65537, -131062, 3, 4, -131061, 3, 4, -131060, 3, 4, -131059, 3, 65537, -65527, 3, 65537, -65526, 3, 7, -65525, 11, 65536, -65524, 11, 65536, -65523, 3, 4, -65522, 3, 65537, 9, 3, 65537, 10, 3, 4, 11, 11, 65536, 12, 11, 65536, 13, 3, 6, 14, 3, 65537, 15, 3, 65537, 65546, 3, 65537, 65547, 3, 4, 65548, 11, 65539, 65549, 3, 65537, 131082, 3, 65537 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Props" type="TileMap" parent="TileMap"]
+material = ExtResource( 7 )
+mode = 1
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 131086, 16, 0, 131089, 20, 0, 262156, 14, 0 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StartingPositions" type="TileMap" parent="TileMap"]
+z_index = 1
+mode = 1
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -327664, 11, 0, -131053, 11, 0, 19, 11, 0, 196616, 12, 0, 327689, 12, 0, 393228, 12, 0 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 195, 114 )
+current = true
+zoom = Vector2( 0.55, 0.55 )
+
+[node name="Layer" type="Node2D" parent="."]
+z_index = 1
+
+[node name="LineEdit" type="LineEdit" parent="Layer"]
+margin_left = 225.0
+margin_top = 244.0
+margin_right = 413.0
+margin_bottom = 285.0
+rect_scale = Vector2( 0.6, 0.6 )
+placeholder_text = "Map name"
+
+[node name="Save" type="Button" parent="Layer"]
+margin_left = 351.0
+margin_top = 242.0
+margin_right = 417.0
+margin_bottom = 270.0
+text = "save"
+
+[node name="Button" type="Button" parent="."]
+margin_left = -75.0
+margin_top = 240.0
+margin_right = -35.0
+margin_bottom = 268.0
+text = "Print tile regions"
+
+[connection signal="pressed" from="Layer/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

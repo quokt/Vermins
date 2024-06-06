@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_10.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Obstruction.gd" type="Script" id=2]
+
+[node name="Obstruction" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Obstruction"
+turns = 1
+cooldown_mode = 1
+icon = ExtResource( 1 )
+description = "Take and deal 50% less damage"
+base_description = "Take and deal 50% less damage"
+crit_description = "Take and deal 25% less damage"
+stack_mode = 1

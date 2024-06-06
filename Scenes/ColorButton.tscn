@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/ColorButton.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 1 )
+colors = PoolColorArray( 0.796875, 0.090271, 0.090271, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 20
+
+[node name="OptionButton" type="OptionButton" groups=["color_buttons"]]
+anchor_right = 0.021
+anchor_bottom = 0.028
+margin_left = 4.0
+margin_top = -1.0
+margin_right = 16.496
+margin_bottom = 18.2
+rect_scale = Vector2( 0.5, 0.5 )
+icon = SubResource( 2 )
+script = ExtResource( 1 )

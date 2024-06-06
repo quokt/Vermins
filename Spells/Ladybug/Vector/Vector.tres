@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_85.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = true
+spell_effects = 0
+min_range = 0
+max_range = 6
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Vector"
+spell_ID = "Vector"
+character = "Ladybug"
+description = "Heal allies in the area. Enemies deal reduced physical damage for one turn."
+critical_effect = "More healing. Lasts one more turn."
+cost = 7
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 4
+sight_needed = true
+range_modif = true
+range_mode = 3
+max_per_turn = 2
+cooldown = 0
+min_power = 6
+max_power = 8
+crit_min_power = 10
+crit_max_power = 12
+crit_chance = 0.1
+spell_type = 0
+aoe = 4
+aoe_mode = 3
+buff_name = "Vector"
+buff_targets = 0
+ai_targets = 0

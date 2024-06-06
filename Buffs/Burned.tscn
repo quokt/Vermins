@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_63.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Burned.gd" type="Script" id=2]
+
+[node name="Burned" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+apply_mode = 2
+buff_name = "Burned"
+turns = 3
+icon = ExtResource( 1 )
+base_description = "Take 3 damage at the end of your turn"
+crit_description = "Take 5 damage at the end of your turn"
+stack_mode = 1
+damage_type = "Magic"

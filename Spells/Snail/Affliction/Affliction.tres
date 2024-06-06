@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_95.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 1
+min_range = 0
+max_range = 4
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Affliction"
+spell_ID = "Affliction"
+character = "Snail"
+description = "Heal allies and damage enemies in the area."
+critical_effect = "More damage"
+cost = 11
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 4
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 3
+cooldown = 0
+min_power = 6
+max_power = 8
+crit_min_power = 10
+crit_max_power = 12
+crit_chance = 0.15
+spell_type = 0
+aoe = 2
+aoe_mode = 1
+buff_name = ""
+buff_targets = 0
+ai_targets = 1

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_4.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Third_eye.gd" type="Script" id=2]
+
+[node name="Third_eye" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Third Eye"
+buff_id = "Third_eye"
+turns = 3
+cooldown_mode = 1
+icon = ExtResource( 1 )
+description = "+25% critical chance. Maximise any random number"
+base_description = "+25% critical chance. Maximise any random number"
+crit_description = "+25% critical chance. Maximise any random number"

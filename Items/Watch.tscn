@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Watch.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Watch.png" type="Texture" id=2]
+
+[node name="Watch" type="Node"]
+script = ExtResource( 1 )
+item_name = "Watch"
+item_texture = ExtResource( 2 )
+description = "On turn 15, gain +6 damage for the rest of the game."
+cost = 6
+description_activated = "+6 damage"

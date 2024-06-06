@@ -1,0 +1,10 @@
+extends Buff
+
+export (int) var max_health_bonus
+
+
+remotesync func _apply_buff(actor ):
+	caster.max_health_points += max_health_bonus
+
+remotesync func _remove_buff(actor ) -> void:
+	caster.max_health_points -= max_health_bonus

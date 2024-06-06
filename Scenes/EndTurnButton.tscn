@@ -1,0 +1,162 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/pixel_font_dynamic.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/EndTurnButton.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="EndTurnButton" type="Button"]
+margin_left = 451.0
+margin_top = 151.0
+margin_right = 561.0
+margin_bottom = 256.0
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.99
+margin_right = -19.0
+margin_bottom = -20.95
+rect_scale = Vector2( 1.2, 1.2 )
+text = "enD
+turn"
+align = 1
+valign = 1
+
+[node name="BgSmall" type="TileMap" parent="."]
+show_behind_parent = true
+position = Vector2( 14, 4 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65535, 1, 4, 131071, 1, 131076 )
+
+[node name="ButtonSmall" type="Button" parent="BgSmall"]
+margin_left = -9.0
+margin_top = 54.0
+margin_right = 13.0
+margin_bottom = 107.0
+rect_rotation = 180.0
+action_mode = 0
+text = ">"
+flat = true
+clip_text = true
+
+[node name="BgWide" type="TileMap" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2( 14, 4 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -8, 1, 0, -7, 1, 524289, -6, 1, 2, -4, 1, 0, -3, 1, 524289, -2, 1, 2, 65527, 1, 0, 65528, 1, 524290, 65529, 1, 65537, 65530, 1, 524288, 65531, 1, 1, 65532, 1, 524290, 65533, 1, 65537, 65534, 1, 524288, 65535, 1, 2, 131063, 1, 131072, 131064, 1, 393217, 131065, 1, 131073, 131066, 1, 131073, 131067, 1, 131073, 131068, 1, 131073, 131069, 1, 131073, 131070, 1, 131073, 131071, 1, 131074 )
+
+[node name="Tabs" type="Control" parent="BgWide"]
+margin_left = -286.0
+margin_top = -33.0
+margin_right = -217.0
+margin_bottom = -9.0
+rect_scale = Vector2( 4, 4 )
+mouse_filter = 2
+
+[node name="Tab1" type="Control" parent="BgWide/Tabs"]
+visible = false
+anchor_left = 0.518
+anchor_top = 0.059
+anchor_right = 0.518
+anchor_bottom = 0.059
+margin_left = -27.742
+margin_top = 7.584
+margin_right = 33.258
+margin_bottom = 22.584
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BgWide/Tabs/Tab1"]
+margin_right = 61.0
+margin_bottom = 15.0
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Control" type="Control" parent="BgWide/Tabs/Tab1/ScrollContainer"]
+
+[node name="CombatPrinter" type="RichTextLabel" parent="BgWide/Tabs/Tab1/ScrollContainer/Control" groups=["combat_printer"]]
+margin_left = 1.0
+margin_right = 288.0
+margin_bottom = 70.0
+rect_scale = Vector2( 0.21, 0.21 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+scroll_following = true
+
+[node name="Tab2" type="Control" parent="BgWide/Tabs"]
+margin_left = 7.0
+margin_top = 9.0
+margin_right = 69.0
+margin_bottom = 24.0
+
+[node name="TransparentProps" type="CheckBox" parent="BgWide/Tabs/Tab2"]
+margin_left = 0.333332
+margin_top = -0.25
+margin_right = 165.333
+margin_bottom = 27.75
+rect_scale = Vector2( 0.25, 0.25 )
+text = "Transparent props"
+flat = true
+
+[node name="Sounds" type="CheckBox" parent="BgWide/Tabs/Tab2"]
+margin_top = 7.08334
+margin_right = 165.0
+margin_bottom = 35.0833
+rect_scale = Vector2( 0.25, 0.25 )
+text = "Sounds"
+flat = true
+
+[node name="Filter" type="CheckBox" parent="BgWide/Tabs/Tab2"]
+margin_left = 22.1667
+margin_top = 6.75
+margin_right = 99.1667
+margin_bottom = 34.75
+rect_scale = Vector2( 0.25, 0.25 )
+text = "Filter"
+flat = true
+
+[node name="Button" type="Button" parent="BgWide"]
+margin_left = -256.0
+margin_top = -29.0
+margin_right = -163.0
+margin_bottom = 1.0
+text = "Log"
+flat = true
+
+[node name="Button2" type="Button" parent="BgWide"]
+margin_left = -122.667
+margin_top = -29.3333
+margin_right = -26.6667
+margin_bottom = 0.666664
+rect_scale = Vector2( 0.9, 0.9 )
+text = "Options"
+flat = true
+
+[node name="ButtonWide" type="Button" parent="BgWide"]
+margin_left = -286.0
+margin_top = 2.0
+margin_right = -256.0
+margin_bottom = 63.0
+text = ">"
+flat = true
+
+[connection signal="pressed" from="BgSmall/ButtonSmall" to="." method="_on_ButtonSmall_pressed"]
+[connection signal="toggled" from="BgWide/Tabs/Tab2/TransparentProps" to="." method="_on_TransparentProps_toggled"]
+[connection signal="toggled" from="BgWide/Tabs/Tab2/Sounds" to="." method="_on_Sounds_toggled"]
+[connection signal="toggled" from="BgWide/Tabs/Tab2/Filter" to="." method="_on_Filter_toggled"]
+[connection signal="pressed" from="BgWide/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="BgWide/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="BgWide/ButtonWide" to="." method="_on_ButtonWide_pressed"]

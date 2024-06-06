@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/Soul_healing.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Flair.gd" type="Script" id=2]
+
+[node name="Flair" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Flair"
+buff_id = "Flair"
+turns = -1
+icon = ExtResource( 1 )
+base_description = "+5% damage"
+crit_description = "+5% damage"
+max_stack = 10

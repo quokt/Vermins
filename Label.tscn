@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="Label" type="Label"]
+margin_right = 76.0
+margin_bottom = 37.0
+text = "Value"

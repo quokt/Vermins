@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/FTManager.gd" type="Script" id=1]
+
+[node name="FTManager" type="Node2D"]
+scale = Vector2( 0.38, 0.38 )
+z_index = 7
+script = ExtResource( 1 )
+duration = 2.5
+spread = 0.1

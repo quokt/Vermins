@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_57.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = true
+spell_effects = 8
+min_range = 0
+max_range = 0
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Bulk"
+spell_ID = "Bulk"
+character = "Beetle"
+description = "Give allies in the area +20% DR for 2 turns"
+critical_effect = "30% DR instead"
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 3
+sight_needed = false
+range_modif = false
+range_mode = 0
+max_per_turn = 0
+cooldown = 3
+min_power = 0
+max_power = 0
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 0
+aoe = 3
+aoe_mode = 0
+buff_name = "Bulk"
+buff_targets = 2
+ai_targets = 2

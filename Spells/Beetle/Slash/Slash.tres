@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_59.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = true
+spell_effects = 9
+min_range = 1
+max_range = 3
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Slash"
+spell_ID = "Slash"
+character = "Beetle"
+description = "Deal 4-6 damage in an area. "
+critical_effect = "Reduce enemies damage for this turn"
+cost = 8
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 3
+sight_needed = true
+range_modif = true
+range_mode = 1
+max_per_turn = 0
+cooldown = 0
+min_power = 4
+max_power = 6
+crit_min_power = 8
+crit_max_power = 10
+crit_chance = 0.33
+spell_type = 0
+aoe = 2
+aoe_mode = 5
+buff_name = "Slash"
+buff_targets = 1
+ai_targets = 1

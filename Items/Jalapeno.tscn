@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Jalapeno.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Jalapeno.png" type="Texture" id=2]
+
+[node name="Jalapeno" type="Node"]
+script = ExtResource( 1 )
+item_name = "Jalapeno"
+item_texture = ExtResource( 2 )
+description = "+2 damage"
+cost = 8

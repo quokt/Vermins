@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Weak_mind.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/Spirit_blade.png" type="Texture" id=2]
+
+[node name="Weak_mind" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Weak Mind"
+buff_id = "Weak_mind"
+turns = 2
+icon = ExtResource( 2 )
+base_description = "-2 range"
+crit_description = "-3 range"
+max_stack = 2

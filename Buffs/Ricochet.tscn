@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Ricochet.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_70.png" type="Texture" id=2]
+
+[node name="Ricochet" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Ricochet"
+turns = 2
+icon = ExtResource( 2 )
+base_description = "Reflect 50% damage"
+crit_description = "Reflect 50% damage"
+max_stack = 3

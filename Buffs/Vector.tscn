@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Vector.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_85.png" type="Texture" id=2]
+
+[node name="Vector" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Vector"
+turns = 1
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "-4 physic damage."
+crit_description = "-4 physic damage."

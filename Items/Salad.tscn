@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Salad.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Salad.png" type="Texture" id=2]
+
+[node name="Salad" type="Node"]
+script = ExtResource( 1 )
+item_name = "Salad"
+item_texture = ExtResource( 2 )
+description = "+2 damage reduction"
+cost = 8

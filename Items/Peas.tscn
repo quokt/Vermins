@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Peas.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Peas.png" type="Texture" id=2]
+
+[node name="Peas" type="Node"]
+script = ExtResource( 1 )
+item_name = "Peas"
+item_texture = ExtResource( 2 )
+description = "+3 magic damage reduction"
+cost = 8

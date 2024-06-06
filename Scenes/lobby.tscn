@@ -1,0 +1,151 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/lobby.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Button3D.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Lobby" type="Control"]
+anchor_left = -0.001
+anchor_right = -0.001
+margin_left = 0.024
+margin_top = -1.0
+margin_right = 640.024
+margin_bottom = 399.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = ExtResource( 1 )
+
+[node name="LobbyPanel" type="Panel" parent="."]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 333.0
+margin_bottom = 193.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="AddressLabel" type="Label" parent="LobbyPanel"]
+margin_left = 101.0
+margin_top = 43.0
+margin_right = 205.0
+margin_bottom = 73.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Address"
+
+[node name="Address" type="LineEdit" parent="LobbyPanel"]
+margin_left = 61.0
+margin_top = 77.0
+margin_right = 261.0
+margin_bottom = 117.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "127.0.0.1"
+
+[node name="HostButton" type="Button" parent="LobbyPanel"]
+margin_left = 64.0
+margin_top = 123.0
+margin_right = 144.0
+margin_bottom = 153.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LobbyPanel/HostButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "host"
+align = 1
+valign = 1
+
+[node name="JoinButton" type="Button" parent="LobbyPanel"]
+margin_left = 178.0
+margin_top = 123.0
+margin_right = 258.0
+margin_bottom = 153.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LobbyPanel/JoinButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "join"
+align = 1
+valign = 1
+
+[node name="GetLocalIP" type="Button" parent="LobbyPanel"]
+margin_left = 76.0
+margin_top = 160.0
+margin_right = 244.0
+margin_bottom = 188.0
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LobbyPanel/GetLocalIP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "get local ip"
+align = 1
+valign = 1
+
+[node name="StatusOk" type="Label" parent="LobbyPanel"]
+margin_left = 2.0
+margin_top = 194.0
+margin_right = 328.0
+margin_bottom = 287.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 1, 0.015625, 1 )
+align = 1
+autowrap = true
+
+[node name="StatusFail" type="Label" parent="LobbyPanel"]
+margin_left = 14.0
+margin_top = 193.0
+margin_right = 324.0
+margin_bottom = 223.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+align = 1
+autowrap = true
+
+[node name="PortForward" type="Label" parent="LobbyPanel"]
+visible = false
+margin_left = 17.0
+margin_top = 223.0
+margin_right = 494.0
+margin_bottom = 369.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_constants/line_spacing = 6
+text = "If you want non-LAN clients to connect, make sure the port 8910 in UDP is forwarded on your router."
+align = 1
+autowrap = true
+
+[node name="FindPublicIP" type="LinkButton" parent="LobbyPanel"]
+visible = false
+margin_left = -8.0
+margin_top = 193.0
+margin_right = 339.0
+margin_bottom = 223.0
+text = "Find your public IP address"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="LobbyPanel"]
+margin_left = 48.0
+margin_top = 5.0
+margin_right = 268.0
+margin_bottom = 45.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Multiplayer"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="LobbyPanel/HostButton" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="LobbyPanel/JoinButton" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="LobbyPanel/GetLocalIP" to="." method="_on_GetLocalIP_pressed"]
+[connection signal="pressed" from="LobbyPanel/FindPublicIP" to="." method="_on_find_public_ip_pressed"]

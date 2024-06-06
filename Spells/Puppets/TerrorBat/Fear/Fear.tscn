@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Spells/Puppets/TerrorBat/Fear/Fear.gd" type="Script" id=1]
+
+[node name="Fear" type="Node"]
+script = ExtResource( 1 )
+spell_ID = "Fear"
+character = "TerrorBat"
+_puppet = true

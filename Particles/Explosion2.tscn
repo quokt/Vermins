@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 180.0
+gravity = Vector3( 0, -50, 0 )
+initial_velocity_random = 0.2
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 97.03
+scale = 2.0
+color = Color( 0.964706, 0.235294, 0.0352941, 1 )
+
+[node name="Explosion2" type="Particles2D"]
+amount = 250
+process_material = SubResource( 3 )

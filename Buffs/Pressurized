@@ -1,0 +1,12 @@
+extends Buff
+
+export var damage_output_flat = 2
+
+
+remotesync func _apply_buff(actor ):
+	actor.damage_type_modif["Magic"]["Flat"] -= damage_output_flat
+	actor.damage_type_modif["Psychic"]["Flat"] -= damage_output_flat
+
+remotesync func _remove_buff(actor ) -> void:
+	actor.damage_type_modif["Magic"]["Flat"] += damage_output_flat
+	actor.damage_type_modif["Psychic"]["Flat"] += damage_output_flat

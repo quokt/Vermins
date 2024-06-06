@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Items/Lollipop.png" type="Texture" id=1]
+[ext_resource path="res://Items/Lollipop.gd" type="Script" id=2]
+
+[node name="Lollipop" type="Node"]
+script = ExtResource( 2 )
+item_name = "Lollipop"
+item_texture = ExtResource( 1 )
+description = "-8 health
++12% critical chance"
+cost = 4
+crit_chance = 0.12
+health_debuff = 8

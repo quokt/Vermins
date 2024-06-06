@@ -1,0 +1,237 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/@pixel_iwart/bars.png" type="Texture" id=2]
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Scripts/BaseSpellInfo.gd" type="Script" id=4]
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 224, 150, 17, 10 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 5, 35, 54, 15 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 43, 16, 31, 15 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 472, 259, 8, 9 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 162.515, 0.555626 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TileMap6" type="TileMap" parent="."]
+position = Vector2( -162, -32 )
+scale = Vector2( 1.02, 1.02 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65541, 0, 0, 65542, 0, 1, 65543, 0, 1, 65544, 0, 2, 131077, 0, 65536, 131078, 0, 65537, 131079, 0, 65537, 131080, 0, 458752, 196613, 0, 131072, 196614, 0, 131073, 196615, 0, 131073, 196616, 0, 131074 )
+
+[node name="Shadow" type="TileMap" parent="TileMap6"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 4, 4 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65541, 0, 0, 65542, 0, 524289, 65543, 0, 1, 65544, 0, 2, 131077, 0, 65536, 131078, 0, 65537, 131079, 0, 65537, 131080, 0, 65538, 196613, 0, 131072, 196614, 0, 131073, 196615, 0, 393217, 196616, 0, 131074 )
+
+[node name="TileMap7" type="TileMap" parent="TileMap6"]
+position = Vector2( 14.7059, 4.90196 )
+scale = Vector2( 0.931373, 0.931373 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65541, 1, 262144, 65542, 1, 262145, 65543, 1, 262145, 65544, 1, 262146 )
+
+[node name="Label" type="Label" parent="TileMap6/TileMap7"]
+margin_left = 164.343
+margin_top = 33.6951
+margin_right = 297.343
+margin_bottom = 61.6951
+rect_scale = Vector2( 0.9, 0.9 )
+text = "base spell"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="TileMap6/TileMap7/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+text = "base spell"
+align = 1
+valign = 1
+
+[node name="Shadow" type="TileMap" parent="TileMap6/TileMap7"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 2, 3 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65541, 1, 262144, 65542, 1, 262145, 65543, 1, 262145, 65544, 1, 262146 )
+
+[node name="Fg2" type="Sprite" parent="TileMap6/TileMap7"]
+position = Vector2( 168.962, 59.0246 )
+scale = Vector2( 0.995896, 0.993022 )
+z_index = 7
+texture = SubResource( 5 )
+
+[node name="TileMap8" type="TileMap" parent="TileMap6"]
+position = Vector2( 14.7059, 5.88235 )
+scale = Vector2( 0.931373, 0.931373 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131077, 1, 0, 131078, 1, 524289, 131079, 1, 1, 131080, 1, 2, 196613, 1, 131072, 196614, 1, 131073, 196615, 1, 393217, 196616, 1, 131074 )
+
+[node name="Type" type="Sprite" parent="TileMap6/TileMap8"]
+position = Vector2( 200.877, 77.3033 )
+scale = Vector2( 1.45, 1.5 )
+texture = SubResource( 6 )
+
+[node name="Shadow" type="Sprite" parent="TileMap6/TileMap8/Type"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+texture = SubResource( 6 )
+
+[node name="Label" type="Label" parent="TileMap6/TileMap8/Type"]
+margin_left = -8.01375
+margin_top = -6.54706
+margin_right = 69.9863
+margin_bottom = 21.453
+rect_scale = Vector2( 0.38, 0.36 )
+text = "PHYSIC"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="TileMap6/TileMap8/Type/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 1.87494
+margin_top = 1.62972
+margin_right = 14.8749
+margin_bottom = 60.6297
+text = "PHYSIC"
+
+[node name="Energy" type="Sprite" parent="TileMap6/TileMap8"]
+position = Vector2( 263.326, 77.729 )
+scale = Vector2( 1.4, 1.4 )
+texture = SubResource( 7 )
+
+[node name="Shadow" type="Sprite" parent="TileMap6/TileMap8/Energy"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+texture = SubResource( 7 )
+
+[node name="Label" type="Label" parent="TileMap6/TileMap8/Energy"]
+margin_left = 3.06166
+margin_top = -7.61917
+margin_right = 18.0617
+margin_bottom = 20.3808
+rect_scale = Vector2( 0.45, 0.45 )
+text = "3"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="TileMap6/TileMap8/Energy/Label"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 1.87494
+margin_top = 1.62972
+margin_right = 14.8749
+margin_bottom = 60.6297
+text = "3
+"
+
+[node name="Shadow" type="TileMap" parent="TileMap6/TileMap8"]
+modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 2, 3 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131077, 1, 0, 131078, 1, 524289, 131079, 1, 1, 131080, 1, 2, 196613, 1, 131072, 196614, 1, 393217, 196615, 1, 131073, 196616, 1, 131074 )
+
+[node name="Fg" type="Sprite" parent="TileMap6/TileMap8"]
+position = Vector2( 284.017, 69.9933 )
+scale = Vector2( 0.993334, 0.999745 )
+z_index = 8
+texture = SubResource( 4 )
+
+[node name="Fg2" type="Sprite" parent="TileMap6/TileMap8"]
+position = Vector2( 168.946, 123.043 )
+scale = Vector2( 0.995896, 0.993022 )
+z_index = 7
+texture = SubResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TileMap6/TileMap8"]
+margin_left = 167.105
+margin_top = 89.4737
+margin_right = 367.105
+margin_bottom = 148.474
+rect_scale = Vector2( 0.6, 0.6 )
+custom_constants/separation = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Range" type="Label" parent="TileMap6/TileMap8/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 28.0
+text = "RANGE: 3"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="TileMap6/TileMap8/VBoxContainer/Range"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+text = "RANGE:"
+
+[node name="Damage" type="Label" parent="TileMap6/TileMap8/VBoxContainer"]
+margin_top = 27.0
+margin_right = 200.0
+margin_bottom = 55.0
+text = "DAMAGE:"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Label" parent="TileMap6/TileMap8/VBoxContainer/Damage"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+text = "DAMAGE:"

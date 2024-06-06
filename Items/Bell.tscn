@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Bell.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Bell.png" type="Texture" id=2]
+
+[node name="Bell" type="Node"]
+script = ExtResource( 1 )
+apply_mode = 2
+item_name = "Bell"
+item_texture = ExtResource( 2 )
+description = "Gain +2% damage every turn"
+cost = 16

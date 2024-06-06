@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Candy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Candy.png" type="Texture" id=2]
+
+[node name="Candy" type="Node"]
+script = ExtResource( 1 )
+item_name = "Candy"
+item_texture = ExtResource( 2 )
+description = "+2 damage
+-10 health"
+cost = 4

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Data/Settings.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+show_grid = false
+grid_color = Color( 0, 0.74902, 1, 1 )
+color_index = 18
+smooth_light = false
+foreground = false
+crt_filter = false

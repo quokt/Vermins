@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_15.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Clot.gd" type="Script" id=2]
+
+[node name="Clot" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Clot"
+turns = -1
+icon = ExtResource( 1 )
+base_description = "+4 healing. Can't be removed"
+crit_description = "+5 healing. Can't be removed"
+max_stack = 3

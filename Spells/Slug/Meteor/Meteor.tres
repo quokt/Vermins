@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_41.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 0
+min_range = 6
+max_range = 8
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Meteor"
+spell_ID = "Meteor"
+character = "Slug"
+description = "Deal important damage. Area of effect is increased by range bonus. Targets become burned."
+critical_effect = "More damage, critical burn"
+cost = 14
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 6
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 0
+cooldown = 1
+min_power = 14
+max_power = 16
+crit_min_power = 20
+crit_max_power = 24
+crit_chance = 0.1
+spell_type = 0
+aoe = 2
+aoe_mode = 0
+buff_name = "Burned"
+buff_targets = 4
+ai_targets = 1

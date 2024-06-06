@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_82.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Shard.gd" type="Script" id=2]
+
+[node name="Shard" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Shard"
+buff_id = "Shard"
+turns = 2
+icon = ExtResource( 1 )
+base_description = "Send back 4 damage when you take damage."
+crit_description = "Send back 4 damage when you take damage."

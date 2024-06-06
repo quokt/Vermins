@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_30.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Rush.gd" type="Script" id=2]
+
+[node name="Rush" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Rush"
+turns = 1
+cooldown_mode = 1
+icon = ExtResource( 1 )
+base_description = "Push damages doubled"
+crit_description = "Push damages doubled"
+stack_mode = 3

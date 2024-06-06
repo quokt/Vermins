@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_39.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Conviction.gd" type="Script" id=2]
+
+[node name="Conviction" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+apply_mode = 5
+buff_name = "Conviction"
+turns = 3
+icon = ExtResource( 1 )
+base_description = "2 damage for each stamina point you spend"
+crit_description = "3 damage for each stamina point you spend"
+max_stack = 3

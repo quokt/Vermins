@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/Eggplant.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Eggplant.png" type="Texture" id=2]
+
+[node name="Eggplant" type="Node"]
+script = ExtResource( 1 )
+item_name = "Eggplant"
+item_texture = ExtResource( 2 )
+description = "+2 range"
+cost = 10

@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=2]
+
+[sub_resource type="ImageTexture" id=1]
+
+[resource]
+flags = 7
+atlas = SubResource( 1 )
+region = Rect2( 122, 2, 20, 20 )

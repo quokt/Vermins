@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Particles/Explosion.tres" type="Material" id=1]
+[ext_resource path="res://fx/Explosion.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Particle.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=83]
+length = 0.001
+
+[sub_resource type="Animation" id=84]
+resource_name = "Spell"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="Explosion" type="Node2D"]
+z_index = 3
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="Particles2D" parent="."]
+position = Vector2( 0, 4 )
+scale = Vector2( 0.5, 0.5 )
+amount = 12
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource( 1 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 83 )
+anims/Spell = SubResource( 84 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

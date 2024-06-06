@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Hatching.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_3.png" type="Texture" id=2]
+
+[node name="Hatching" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+apply_mode = 3
+buff_name = "Hatching"
+turns = 1
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "This egg is hatching..."
+crit_description = "This egg is hatching..."
+stack_mode = 3

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Shelter.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_83.png" type="Texture" id=2]
+
+[node name="Shelter" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Shelter"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "Reflect 20% damage"
+crit_description = "Reflect 20% damage"

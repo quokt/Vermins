@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Sap.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_20.png" type="Texture" id=2]
+
+[node name="Sap" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+apply_mode = 5
+buff_name = "Sap"
+turns = 3
+icon = ExtResource( 2 )
+description = "Take 4 extra damage (not lethal) each time you take damage."
+base_description = "Take 4 extra damage (not lethal) each time you take damage."
+crit_description = "Take 6 extra damage (not lethal) each time you take damage."
+max_stack = 3

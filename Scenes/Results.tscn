@@ -1,0 +1,174 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/UI/gui_paper.png" type="Texture" id=1]
+[ext_resource path="res://ui_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Scripts/Results.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/TeamPreview.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Button3D.gd" type="Script" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 38, 65, 20 )
+
+[node name="Results" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 0.392157 )
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 577.0
+
+[node name="Bg" type="TileMap" parent="."]
+scale = Vector2( 3.55, 3.55 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65538, 1, 0, 65539, 1, 1, 65540, 1, 524289, 65541, 1, 524289, 65542, 1, 2, 131074, 1, 458754, 131075, 1, 65537, 131076, 1, 65537, 131077, 1, 65537, 131078, 1, 458752, 196610, 1, 131072, 196611, 1, 393217, 196612, 1, 393217, 196613, 1, 131073, 196614, 1, 131074 )
+
+[node name="Shadow" type="TileMap" parent="Bg"]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+position = Vector2( 6, 6 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65538, 1, 0, 65539, 1, 1, 65540, 1, 524289, 65541, 1, 524289, 65542, 1, 2, 131074, 1, 458754, 131075, 1, 65537, 131076, 1, 65537, 131077, 1, 65537, 131078, 1, 65538, 196610, 1, 131072, 196611, 1, 131073, 196612, 1, 393217, 196613, 1, 131073, 196614, 1, 131074 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 303.0
+margin_top = 183.0
+margin_right = 893.0
+margin_bottom = 463.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_constants/separation = 150
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TeamPreview" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 220.0
+margin_bottom = 280.0
+
+[node name="TeamPreview2" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 370.0
+margin_top = 0.0
+margin_right = 590.0
+margin_bottom = 280.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 517, 128 )
+scale = Vector2( 7, 7 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shadow" type="Sprite" parent="Sprite"]
+self_modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+position = Vector2( 1.125, 1.625 )
+texture = SubResource( 1 )
+
+[node name="VictoryLabel" type="RichTextLabel" parent="Sprite"]
+margin_left = -24.625
+margin_top = -21.625
+margin_right = 78.375
+margin_bottom = 38.375
+rect_scale = Vector2( 0.45, 0.45 )
+bbcode_enabled = true
+bbcode_text = "[rainbow freq=0.5 sat=1 val=1][center][wave amp=35 freq=3]Victory"
+text = "Victory"
+
+[node name="TextShadow" type="RichTextLabel" parent="Sprite/VictoryLabel"]
+self_modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+margin_left = 2.77778
+margin_top = 1.66667
+margin_right = 109.778
+margin_bottom = 59.6667
+bbcode_enabled = true
+bbcode_text = "[rainbow freq=0.5 sat=1 val=1][center][wave amp=36 freq=3]Victory[/wave][/center][/rainbow]"
+text = "Victory"
+
+[node name="DefeatLabel" type="RichTextLabel" parent="Sprite"]
+visible = false
+margin_left = -25.0
+margin_top = -8.5
+margin_right = 78.0
+margin_bottom = 24.5
+rect_scale = Vector2( 0.45, 0.45 )
+bbcode_enabled = true
+bbcode_text = "[center][tornado radius=4 freq=2]DEFEAT"
+text = "DEFEAT"
+
+[node name="TextShadow" type="RichTextLabel" parent="Sprite/DefeatLabel"]
+self_modulate = Color( 0, 0, 0, 0.745098 )
+show_behind_parent = true
+margin_left = 7.5
+margin_top = 3.05556
+margin_right = 107.5
+margin_bottom = 35.0556
+bbcode_enabled = true
+bbcode_text = "[center][tornado radius=4 freq=2]DEFEAT"
+text = "DEFEAT"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 304.0
+margin_top = 398.0
+margin_right = 454.0
+margin_bottom = 426.0
+text = "Victory"
+align = 1
+valign = 1
+
+[node name="Shadow" type="Label" parent="Label"]
+self_modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 153.0
+margin_bottom = 31.0
+text = "Victory"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 564.0
+margin_top = 400.0
+margin_right = 714.0
+margin_bottom = 428.0
+text = "Defeat"
+align = 1
+valign = 1
+
+[node name="Shadow" type="Label" parent="Label2"]
+self_modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 153.0
+margin_bottom = 31.0
+text = "Defeat"
+align = 1
+valign = 1
+
+[node name="TitleScreenButton" type="Button" parent="."]
+margin_left = 418.0
+margin_top = 475.0
+margin_right = 611.0
+margin_bottom = 525.0
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="TitleScreenButton"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 189.0
+margin_bottom = 46.0
+text = "Title screen"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="TitleScreenButton" to="." method="_on_TitleScreenButton_pressed"]

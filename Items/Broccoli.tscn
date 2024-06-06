@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Items/Broccoli.png" type="Texture" id=1]
+[ext_resource path="res://Items/Broccoli.gd" type="Script" id=2]
+
+[node name="Broccoli" type="Node"]
+script = ExtResource( 2 )
+item_name = "Broccoli"
+item_texture = ExtResource( 1 )
+description = "+12 max health"
+cost = 6

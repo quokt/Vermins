@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_79.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Rejuvenate.gd" type="Script" id=2]
+
+[node name="Rejuvenate" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+apply_mode = 1
+buff_name = "Rejuvenate"
+turns = 3
+icon = ExtResource( 1 )
+description = "Heal *4* at the start of your turn (doubled every turn)"
+stack_mode = 1

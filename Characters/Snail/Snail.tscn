@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Characters/Snail/Snail.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/Mole.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/HealthLabel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/FTManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Tiles/map_ring_white.png" type="Texture" id=5]
+[ext_resource path="res://outline_shader.tres" type="Shader" id=6]
+[ext_resource path="res://Scenes/ActorAnimation.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/line_thickness = 0.7
+
+[node name="Snail" type="Area2D" groups=["actors"]]
+collision_layer = 513
+collision_mask = 513
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+CLASS = "Snail"
+cost = 18
+base_health_points = 50
+base_energy = 0
+base_stamina = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 1 )
+position = Vector2( 0, 6 )
+z_index = 2
+frames = ExtResource( 1 )
+animation = "Default"
+frame = 3
+playing = true
+offset = Vector2( 0, -5.55556 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 7 )
+polygon = PoolVector2Array( -15.6, 1.25, 0, -6.4, 15.6, 1.25, 0, 8.9 )
+
+[node name="TextureLabel" parent="." instance=ExtResource( 3 )]
+
+[node name="FTManager" parent="." instance=ExtResource( 4 )]
+
+[node name="Ring" type="Sprite" parent="."]
+position = Vector2( 0, 8 )
+z_index = 1
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Buffs" type="Node" parent="."]
+
+[node name="Spells" type="Node" parent="."]
+
+[node name="Items" type="Node" parent="."]
+
+[node name="ActorAnimation" parent="." instance=ExtResource( 7 )]

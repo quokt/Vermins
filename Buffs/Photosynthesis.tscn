@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_58.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Photosynthesis.gd" type="Script" id=2]
+
+[node name="Photosynthesis" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Photosynthesis"
+buff_id = "Photosynthesis"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 1 )
+base_description = "+2 stamina"
+crit_description = "+2 stamina"

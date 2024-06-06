@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SpellResource.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_28.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+base_spell = false
+spell_effects = 0
+min_range = 1
+max_range = 6
+icon = ExtResource( 2 )
+animation = ""
+spell_name = "Diversion"
+spell_ID = "Diversion"
+character = "Bats"
+description = "Push targets from the center of the area, up to 2 tiles"
+critical_effect = "Up to 3 tiles"
+cost = 6
+anim_mode = 0
+cast_mode = 0
+cell_mode = 2
+energy_cost = 2
+sight_needed = true
+range_modif = true
+range_mode = 0
+max_per_turn = 2
+cooldown = 0
+min_power = 0
+max_power = 0
+crit_min_power = 0
+crit_max_power = 0
+crit_chance = 0.1
+spell_type = 1
+aoe = 2
+aoe_mode = 1
+buff_name = ""
+buff_targets = 0
+ai_targets = 5

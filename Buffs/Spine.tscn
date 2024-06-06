@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_98.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Spine.gd" type="Script" id=2]
+
+[node name="Spine" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Spine"
+turns = 2
+icon = ExtResource( 1 )
+base_description = "Send back 3 damage everytime you take damage"
+crit_description = "Send back 5 damage everytime you take damage"
+max_stack = 3
+base_effect = 4

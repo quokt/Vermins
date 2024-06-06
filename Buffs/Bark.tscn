@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Bark.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_80.png" type="Texture" id=2]
+
+[node name="Bark" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Bark"
+turns = 3
+icon = ExtResource( 2 )
+description = "+2 energy"
+base_description = "+2 energy"
+crit_description = "+3 energy"
+max_stack = 2

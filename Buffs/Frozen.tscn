@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_40.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Frozen.gd" type="Script" id=2]
+
+[node name="Frozen" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Frozen"
+turns = 3
+icon = ExtResource( 1 )
+description = "Movement costs 2 energy"
+base_description = "Movement costs 2 energy"
+crit_description = "Movement costs 2 energy"

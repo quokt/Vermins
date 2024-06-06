@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Bulk.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_57.png" type="Texture" id=2]
+
+[node name="Bulk" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+buff_name = "Bulk"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 2 )
+base_description = "20% damage reduction"
+crit_description = "30% damage reduction"
+max_stack = 3

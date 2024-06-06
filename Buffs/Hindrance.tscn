@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Icons/release_v1.2-single_29.png" type="Texture" id=1]
+[ext_resource path="res://Buffs/Hindrance.gd" type="Script" id=2]
+
+[node name="Hindrance" type="Node" groups=["buffs"]]
+script = ExtResource( 2 )
+buff_name = "Hindrance"
+turns = 2
+cooldown_mode = 1
+icon = ExtResource( 1 )
+description = "-2 range"
+base_description = "-2 range"
+crit_description = "-3 range"
+stack_mode = 1

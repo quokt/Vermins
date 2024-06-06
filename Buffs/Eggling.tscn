@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buffs/Eggling.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/release_v1.2-single_36.png" type="Texture" id=2]
+
+[node name="Eggling" type="Node" groups=["buffs"]]
+script = ExtResource( 1 )
+apply_mode = 1
+buff_name = "Eggling"
+turns = 1
+icon = ExtResource( 2 )
+base_description = "You have been fertilized"
+crit_description = "You have been fertilized"
+max_stack = 2

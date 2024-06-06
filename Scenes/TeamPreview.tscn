@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/TeamPreview.gd" type="Script" id=1]
+[ext_resource path="res://Theme/panel2.tres" type="StyleBox" id=2]
+[ext_resource path="res://Assets/pixel_font_dynamic.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/ActorsPreview.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="TeamPreview" type="Panel"]
+margin_left = 1.0
+margin_top = -1.0
+margin_right = 435.0
+margin_bottom = 499.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 1 )
+team_index = 1
+
+[node name="Shadow" type="Panel" parent="."]
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 13.0
+margin_bottom = 13.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 2 )
+
+[node name="Outline" type="Panel" parent="."]
+visible = false
+modulate = Color( 0, 1, 0.0627451, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 6.0
+margin_bottom = 7.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 2 )
+
+[node name="Shadow" type="Panel" parent="Outline"]
+visible = false
+modulate = Color( 0, 0, 0, 0.705882 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_right = 5.0
+margin_bottom = 6.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 2 )
+
+[node name="ActorsPreview" type="Container" parent="."]
+margin_right = 434.0
+margin_bottom = 500.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 4 )
+
+[node name="YSort" type="YSort" parent="ActorsPreview"]
+
+[node name="TeamName" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -210.0
+margin_top = -48.0
+margin_right = 211.0
+margin_bottom = -20.0
+size_flags_vertical = 8
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 1 )
+text = "MY FAVORITE TEAM"
+align = 1
+valign = 2
+
+[node name="Button" type="Button" parent="."]
+margin_left = 2.0
+margin_top = 4.0
+margin_right = 436.0
+margin_bottom = 504.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+flat = true
+
+[connection signal="sort_children" from="ActorsPreview" to="ActorsPreview" method="_on_ActorsPreview_sort_children"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
